@@ -1,0 +1,15 @@
+{{ if .Site.Data.categories.enabled }}
+<section>
+  <div class="row py-3">
+    <div class="col-12 text-center">
+      {{ range .Site.Data.categories.categories }}
+
+      <a href='{{ "/categories/" | relLangURL }}{{ . | urlize }}' class="category category-{{ lower . }}">
+        {{ . }}
+      </a>
+     
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,36 @@
+.nav .nav-item .footer-link {
+  color: white !important;
+  display: block;
+  padding: 10px 5px 10px 5px;
+  margin: 5px 10px 5px 10px;
+
+  &:hover {
+    text-decoration: none;
+    color: $theme-main-color !important;
+  }
+}
+
+.back-to-top {
+  &:hover {
+    opacity: 1 !important;
+  }
+  position: fixed;
+  bottom: 30px;
+  right: 50px;
+  border-radius: 50%;
+  font-size: 14px;
+  color: white;
+  background-color: $theme-main-color;
+  font-weight: bold;
+  padding: 9px;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+@media(max-width: 576px) {
+  .back-to-top {
+    opacity: 0 !important;
+  }
+  
+}

@@ -1,0 +1,28 @@
+baseURL = "https://setcodetype.com/"
+languageCode = "en-us"
+title = "Codetype"
+theme = "codetype-theme"
+pygmentsCodeFences = true
+enableRobotsTXT = true
+
+[taxonomies]
+  category = "categories"
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[params]
+  themeColor = "#12B3A8"
+  favicon = "/favicon.png"
+  image = "/images/world.jpg"
+  keywords = "web development articles, javascript articles for beginners"
+  description = "Learning, Creating and Sharing web development skills."
+  email = "hello@setcodetype.com"
+  mobile = ""
+  address = ""
+  facebook = ""
+  twitter = ""
+  instagram = ""
+  github = ""

@@ -1,0 +1,6 @@
+<a href="#{{ lower (urlize (.Get `title`)) }}" class="content-title">
+  <i class="fas fa-link fa-2x pr-2"></i>
+  <h2 id="{{ lower (urlize (.Get `title`)) }}" class="h3 font-weight-bold d-inline">
+    {{ .Get `title` }}
+  </h2>
+</a>

@@ -1,0 +1,41 @@
+.navi {
+  border-bottom: 1px solid $gray-300;
+}
+.brand {
+  color: $theme-main-color;
+  font-size: 34px;
+  font-weight: 600;
+  font-family: $secondary-font;
+
+  &:hover {
+    text-decoration: none;
+  } 
+}
+
+.nav .nav-item .nav-link {
+  color: rgba(89,85,85, 1);
+  font-weight: 400;
+
+  &:hover {
+    color: $theme-main-color;
+  }
+}
+
+.nav .nav-item .active {
+  color: $theme-main-color;
+}
+
+.header-body{
+  padding-top: 140px;
+  padding-bottom: 180px;
+  color: $light;
+}
+
+.header-title {
+  font-size: 48px;
+  font-weight: 800;
+}
+.header-subtitle {
+  font-size: 28px;
+  margin-top: 18px;
+}

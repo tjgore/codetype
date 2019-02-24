@@ -1,0 +1,23 @@
+{
+  "name": "codetype",
+  "version": "1.0.0",
+  "description": "codetype blog",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-remove-empty-lines": "^0.1.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "install": "^0.12.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo 'Deleting public' && rm -Rf public && hugo && gulp build" 
+  },
+  "author": "TJ Gore",
+  "license": "MIT"
+}

@@ -1,0 +1,15 @@
+{{ define "page-meta-data" }}
+<meta name="description" content="{{ .Description }}"/>
+<meta name="keywords" content="portfolio, web developer, full stack developer, design, html templates, web apps"/>
+<meta content="{{ .Title }}" property="og:site_name">
+<meta content="{{ .Title }}" property="og:title">
+<meta content="{{ .Site.BaseURL }}/images/update.svg" property="og:image">
+<meta content="{{ .Description }}" name="og:description">
+<meta content="{{ .Site.BaseURL }}" property="og:url">
+<link rel="canonical" href="{{ .Permalink }}">
+<title>{{ .Site.Params.Title }}</title>
+{{ end }}
+{{ define "main" }}
+List
+{{.Content}}
+{{end}}
