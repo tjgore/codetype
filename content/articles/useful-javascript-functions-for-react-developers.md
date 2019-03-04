@@ -1,7 +1,7 @@
 ---
 title: "Useful Javascript Functions for React Developers"
 date: 2019-02-28T00:33:38-05:00
-description: "A description"
+description: "Here is a list of javascript functions you may find useful for your next project."
 author: "TJ Gore"
 authorLink: "https://tjwgore.com"
 mainImage: ""
@@ -19,6 +19,8 @@ I will explain and give code examples to demonstrate how and why you would proba
 
 An understanding of javascript es6 is needed to follow along because all code examples will be written using es6.
 
+You should also notice that some functions have (Immutable) in their heading. This simply means the function does not change the original variable but returns a copy of the variable with the changes.
+
 {{<contentTitle title="Array.map() Function (Immutable)">}}
 
 The Map() function loops through each element in the array and returns a new array of the results. This is used when you want to perform an action on each element of the array.
@@ -27,8 +29,13 @@ The Map() function loops through each element in the array and returns a new arr
 ```js
 let animals = ["cat", "dog", "bird", "snake", "tiger"]
 const zoo = animals.map(animal => '3 ' + animal + 's' )
+console.log(animals)
 console.log(zoo)
-// Output: Array(5) ["3 cats", "3 dogs", "3 birds", "3 snakes", "3 tigers"]
+/*
+Output: 
+Array(5) ["cat", "dog", "bird", "snake", "tiger"]
+Array(5) ["3 cats", "3 dogs", "3 birds", "3 snakes", "3 tigers"]
+*/
 
 let numbers = [1, 2, 3, 4, 5, 6]
 numbers.map(number => console.log(number))
@@ -132,3 +139,84 @@ people.splice(1, 1)
 console.log(people)
 // Output: Array(3) ["John", "June", "Jessica"]
 ```
+
+{{<contentTitle title="Array.findIndex() Function">}}
+
+The FindIndex() function loops through an array until it finds the index of the first element that passes the test provided. If the condition is never passed -1 is returned. 
+
+**Take note that this function returns the index, not the element. If you want to find the value use the Array.find() function.**
+
+<span class="hl-info"></span>
+```js
+let weights = [150, 210, 135, 98, 315]
+const result = weights.findIndex(weight => weight >= 200)
+console.log(result)
+// Output: 1
+```
+
+{{<contentTitle title="Array.pop() Function">}}
+
+The Pop() function removes the last element from an array. If you know about the stack data structure, this should be familiar.
+
+<span class="hl-info"></span>
+```js
+let tech = ["js", "php", "ruby", "python"]
+tech.pop()
+console.log(tech)
+// Output: Array(3) ["js", "php", "ruby"]
+```
+
+{{<contentTitle title="Array.push() Function">}}
+
+The Push() function adds an element to the end of an array. Also used with the stack data structure.
+
+<span class="hl-info"></span>
+```js
+let tech = ["js", "php", "ruby", "python"]
+tech.push("go")
+console.log(tech)
+// Output: Array(3) ["js", "php", "ruby", "pyt, "go"]
+```
+
+{{<contentTitle title="Array.unshift() Function">}}
+
+The Unshift() function removes an element from the beginning of an array. 
+
+<span class="hl-info"></span>
+```js
+let nuts = ["cashew", "walnut", "almonds", "peanuts"]
+nuts.unshift()
+console.log(nuts)
+// Output: Array(3) [walnut", "almonds", "peanuts"]
+```
+
+{{<contentTitle title="Array.shift() Function">}}
+
+The Shift() function adds an element to the beginning of an array. 
+
+<span class="hl-info"></span>
+```js
+let nuts = ["cashew", "walnut", "almonds", "peanuts"]
+nuts.shift("pecan")
+console.log(nuts)
+// Output: Array(5) ["pecan", "cashew", "walnut", "almond", "peanut"]```
+```
+
+{{<contentTitle title="Array.indexOf() Function">}}
+
+The IndeOf() function searches an array and string for the first occurrence of the given value and returns its index. If a value is not found -1 is returned.
+
+<span class="hl-info"></span>
+```js
+let greeting = "Hello everyone"
+let fruits = ["apples", "oranges", "watermelon"]
+const hasV = greeting.indexOf("v")
+console.log(hasV)
+// Output: 7
+
+let favoriteFruit = fruits.indexOf("apples")
+console.log(favoriteFruit)
+// Output: 0
+```
+
+I hope you found these javascript functions helpful and useful for your next project and code on! Build something awesome!

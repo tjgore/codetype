@@ -16,9 +16,9 @@ draft: false
 
 Last week I had a technical interview and questions about dependency injection came up and I was quite lost. So I took the initiative to learn more about the topic and write on it for a better understanding. 
 
-I will cover what is dependency injection and explain it as simple as possible and demonstrate how it’s used. To follow along, a basic understanding of PHP object-oriented programming is needed. 
+I will cover what is dependency injection, explain it as simple as possible, and demonstrate how it’s used. A basic understanding of PHP object-oriented programming is needed to follow along. 
 
-Let’s jump right into what is dependency injection.
+Let’s jump right into the definition of dependency injection.
 
 {{<contentTitle title="What is Dependency Injection?">}}
 
@@ -28,25 +28,31 @@ Dependency injection allows an object(client) to use another object(service) in 
 
 In other words, if the service’s code is changed or swapped for another service, the client should still be able to work without any changes to its code.
    
-This concept is important because almost all projects have dependencies and as your project grows you should pay attention to how these dependencies are managed and maintained for the long run.
+This concept is important because almost all projects have dependencies, and as your project grows, you should pay attention to how these dependencies are managed and maintained for the long run.
 
-Before going into code examples, let me give a quick real world example to better explain the concept.
+Before going into code examples, let me give a quick real-world example to better explain the concept.
 
 Imagine you have a company and your company needs computers in order to use Microsoft Excel to keep track of records. In this case, your company is the client and the computers would be the service. Your business has a dependency on computers. The computers are used within your company to manage your company’s records.
 
 With dependency injection, we should be able to change the brand or operating system of the computers without having to change how the company operates on a whole. 
 
-Without dependency injection changing the computers to another brand or operation system would require changes to the company in order to work again. 
+Without dependency injection changing the computers to another brand or operating system would require changes to the company in order to work again. 
 
 I hope this demonstrates how useful dependency injection can be especially when your company grows very large.
 
 There are 3 types of dependency injection.
 
-- Constructor Injection: The service object is passed through a client’s class constructor.
+**1. Constructor Injection**
 
-- Setter Injection: The service object is passed into the setter method that is provided by the client class. Unlike the constructor injection, the setter injection allows the dependency to be optional.
+The service object is passed through a client’s class constructor.
 
-- Interface Injection: The service must implement an interface that is passed to a client’s setter or constructor method. This allows the service to be swappable with other services with the same interface.
+**2. Setter Injection** 
+    
+The service object is passed into the setter method that is provided by the client class. Unlike the constructor injection, the setter injection allows the dependency to be optional.
+
+**3. Interface Injection**
+
+The service must implement an interface that is passed to a client’s setter or constructor method. This allows the service to be swappable with other services with the same interface.
 
 You will see examples of all 3 types below.
 
@@ -96,11 +102,11 @@ Managing finances
 
 ```
 
-The above code example may look fine and not cause any problems in a very small application but it is hard coded and not very flexible. 
+The above code example may look fine and may not cause any problems in a very small application but it is hardcoded and not very flexible. 
 
 Imagine if the Account Class changes and adds a new parameter for the constructor. You would then have to edit every occurrence of the class where the Accountant class is created for your code to work again.
 
-What if we wanted to add a Marketing Class and use it instead of the Accountant class. 
+What if we wanted to add a Marketing Class and use it instead of the Accountant class?
 
 Right now there is no way to do that since the Accountant class is hardcoded into the Desk Class constructor. Our hands are tied. 
 
@@ -109,7 +115,7 @@ Let’s look at an alternative with dependency injection.
 
 {{<contentTitle title="Constructor Injection">}}
 
-Below is an example of the first type of dependency injection, the Constructor Injection. Its called the Constructor Injection because the dependency is injected into the client's construct method.
+Below is an example of the first type of dependency injection, the Constructor Injection. It's called the Constructor Injection because the dependency is injected into the client's construct method.
 
 <span class="hl-info"></span>
 ```php
@@ -307,7 +313,8 @@ The Interface Injection allows the Desk class to use either the Accountant or Ma
 
 This allows you to write and design more modular and easier to maintain code.
 
-Here is another example. Break it down just as the first example we did before. 
+Here is another example. Break it down just as the first example we previously demonstrated. 
+
 
 <span class="hl-info"></span>
 ```php
