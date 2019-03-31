@@ -1,6 +1,7 @@
-<a href="#{{ lower (urlize (.Get `title`)) }}" class="content-title">
+{{ $title := .Get `title` }}
+<a href="#{{if .Get `id` }}{{ lower (urlize (.Get `id`)) }}{{ else }}{{ lower (urlize  ($title)) }}{{end}}" class="content-title">
   <i class="fas fa-link fa-2x pr-2"></i>
-  <h2 id="{{ lower (urlize (.Get `title`)) }}" class="h3 font-weight-bold d-inline">
-    {{ .Get `title` }}
+  <h2 id="{{if .Get `id` }}{{ lower (urlize (.Get `id`)) }}{{ else }}{{ lower (urlize  ($title)) }}{{end}}" class="h3 font-weight-bold d-inline">
+    {{ $title }}
   </h2>
 </a>

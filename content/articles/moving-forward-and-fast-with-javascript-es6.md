@@ -1,6 +1,6 @@
 ---
 title: "Moving Forward and Fast With Javascript ES6"
-date: 2019-02-28T22:47:03-05:00
+date: 2019-03-01T22:47:03-05:00
 description: "Getting started quickly with javascript es6 code"
 author: "TJ Gore"
 authorLink: "https://tjwgore.com"
@@ -12,6 +12,7 @@ keywords: ["javascript es6 syntax and shorthand", "moving forward and fast with 
 draft: false
 ---
 
+{{% tableOfContent hide="false" column="column-1" content="Let and const,Template literals,Arrow functions, Array and object destructing,Rest and spread operators" %}}
 
 If you haven't been using javascript es6 you have been missing out on the awesome benefits and features it provides.
 

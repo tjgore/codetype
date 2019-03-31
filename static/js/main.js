@@ -20,3 +20,8 @@ $("#back-to-top").click( function () {
 
 /* get copyright year */
 document.getElementById('year').innerHTML = new Date().getFullYear()
+
+/* toggle article table of contents */
+$(".toggle-toc").click( function () {
+  $(".toc-list").slideToggle()
+})

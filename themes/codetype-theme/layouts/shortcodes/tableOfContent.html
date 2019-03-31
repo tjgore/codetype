@@ -1,0 +1,18 @@
+<div class="table-of-content">
+  <h5 class="toc-header toggle-toc">
+    <i class="fas fa-bars mr-2"></i>
+    Table of Content
+  </h5>
+  <ul class="toc-list {{.Get `column`}}" {{if or (eq (.Get `hide`) "true") (eq (.Get `hide`) "") }}style="display:none;" {{ end }}>
+    {{$itItems := split (.Get "content") ","}}
+    {{range $itItems }}
+    <a href="#{{lower (urlize (.))}}" class="toc-link">
+      <li>
+        <span class="toc-hash">
+          <i class="fas fa-link fa-xs"></i>
+        </span> {{ . }}
+      </li>
+    </a>
+    {{end}}
+  </ul>
+</div>

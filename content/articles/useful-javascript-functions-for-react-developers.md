@@ -12,6 +12,8 @@ keywords: ["Useful Javascript Functions for React Developers",]
 draft: false
 ---
 
+{{% tableOfContent column="column-2" content="array.map,array.filter,array.find,array.slice,array.splice,array.findIndex,array.pop,array.push,array.unshift,array.shift,array.indexOf" %}}
+
 Over the past year, I have been using React a lot to build projects and realized there are a few javascript functions that are repeatedly being used. 
 
 This article provides a list of useful javascript functions for react developers.
@@ -21,7 +23,7 @@ An understanding of javascript es6 is needed to follow along because all code ex
 
 You should also notice that some functions have (Immutable) in their heading. This simply means the function does not change the original variable but returns a copy of the variable with the changes.
 
-{{<contentTitle title="Array.map() Function (Immutable)">}}
+{{<contentTitle id="array.map" title="Array.map() Function (Immutable)">}}
 
 The Map() function loops through each element in the array and returns a new array of the results. This is used when you want to perform an action on each element of the array.
 
@@ -50,7 +52,7 @@ Output:
 */
 ``` 
 
-{{<contentTitle title="Array.filter() Function (Immutable)">}}
+{{<contentTitle id="array.filter" title="Array.filter() Function (Immutable)">}}
 
 The Filter() function returns a new array of the values that passed the condition/s provided. This function is used when you are trying to add the values you are looking for from an old array into a new array.
 
@@ -80,7 +82,7 @@ console.log(namesWithLetterA)
 // Output: Array(3) [true, false, true]
 ```
 
-{{<contentTitle title="Array.find() Function (Immutable)">}}
+{{<contentTitle id="array.find" title="Array.find() Function (Immutable)">}}
 
 The Find() function is just like the Filter() function except it returns the first value that passes the provided test and does not loop through the entire array.
 
@@ -92,7 +94,7 @@ console.log(water)
 // Output: blue
 ```
 
-{{<contentTitle title="Array.slice() Function (Immutable)">}}
+{{<contentTitle id="array.slice" title="Array.slice() Function (Immutable)">}}
 
 The Slice() function returns a new array of the selected portion of an old array. The parameters passed represent the start and end indexes of the selected portion from the original array.
 
@@ -115,7 +117,7 @@ console.log(people)
 // Note that the index value of 3 was not added
 ```
 
-{{<contentTitle title="Array.splice() Function">}}
+{{<contentTitle id="array.splice" title="Array.splice() Function">}}
 
 The Splice() function can remove, replace and add element/s to an array. The first parameter is the index position, the second parameter is the number of elements to remove, and the third parameter is the value you want to add. 
 
@@ -140,7 +142,7 @@ console.log(people)
 // Output: Array(3) ["John", "June", "Jessica"]
 ```
 
-{{<contentTitle title="Array.findIndex() Function">}}
+{{<contentTitle id="arrayfindIndex" title="Array.findIndex() Function">}}
 
 The FindIndex() function loops through an array until it finds the index of the first element that passes the test provided. If the condition is never passed -1 is returned. 
 
@@ -154,7 +156,7 @@ console.log(result)
 // Output: 1
 ```
 
-{{<contentTitle title="Array.pop() Function">}}
+{{<contentTitle id="array.pop" title="Array.pop() Function">}}
 
 The Pop() function removes the last element from an array. If you know about the stack data structure, this should be familiar.
 
@@ -166,7 +168,7 @@ console.log(tech)
 // Output: Array(3) ["js", "php", "ruby"]
 ```
 
-{{<contentTitle title="Array.push() Function">}}
+{{<contentTitle id="array.push" title="Array.push() Function">}}
 
 The Push() function adds an element to the end of an array. Also used with the stack data structure.
 
@@ -178,7 +180,7 @@ console.log(tech)
 // Output: Array(3) ["js", "php", "ruby", "pyt, "go"]
 ```
 
-{{<contentTitle title="Array.unshift() Function">}}
+{{<contentTitle id="array.unshift" title="Array.unshift() Function">}}
 
 The Unshift() function removes an element from the beginning of an array. 
 
@@ -190,7 +192,7 @@ console.log(nuts)
 // Output: Array(3) [walnut", "almonds", "peanuts"]
 ```
 
-{{<contentTitle title="Array.shift() Function">}}
+{{<contentTitle id="array.shift" title="Array.shift() Function">}}
 
 The Shift() function adds an element to the beginning of an array. 
 
@@ -202,7 +204,7 @@ console.log(nuts)
 // Output: Array(5) ["pecan", "cashew", "walnut", "almond", "peanut"]```
 ```
 
-{{<contentTitle title="Array.indexOf() Function">}}
+{{<contentTitle id="array.indexOf" title="Array.indexOf() Function">}}
 
 The IndeOf() function searches an array and string for the first occurrence of the given value and returns its index. If a value is not found -1 is returned.
 

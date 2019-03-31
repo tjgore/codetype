@@ -202,3 +202,58 @@
     }
   }
 }
+
+// table of content
+.table-of-content {
+  border: 1px solid #cecece;
+  padding: 0px 15px 5px 25px;
+  border-radius: 5px;
+
+  .toc-header {
+    margin-top: 15px;
+  }
+
+  .toc-header, .toc-hash {
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .toc-hash {
+    color: $theme-main-color;
+  }
+
+  .toc-link {
+    text-decoration: none !important;
+    border-bottom: 0px;
+    color: $gray-600;
+    
+    &:hover {
+      color: $gray-800;
+    }
+  }
+
+  .column-1 {
+    column-count: 1
+  }
+
+  .column-2 {
+    column-count: 2;
+  }
+
+  @media (max-width: map-get($grid-breakpoints, md)) {
+    .column-2 {
+      column-count: 1 
+    }
+  }
+
+  .toc-list {
+    padding-left: 10px;
+    column-gap: 1em;
+    list-style-type: none;
+
+    li {
+      font-weight: 300;
+      padding-bottom: 5px;
+    }
+  }
+}
