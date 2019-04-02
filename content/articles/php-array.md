@@ -12,7 +12,7 @@ keywords: ["handy php array functions", "most commonly used php array functions"
 draft: false
 ---
 
-{{% tableOfContent hide="true" column="column-1" content="Let and const,Template literals,Arrow functions, Array and object destructing,Rest and spread operators" %}}
+{{% tableOfContent hide="true" column="column-2" content="array_chunk,array_combine,array_count_values,array_diff,array_map, array_filter,array_flip,array_key_exists,array_search" %}}
 
 
 What is an array? An array is a collection of data. You can create an array in many ways.
@@ -136,7 +136,7 @@ Array
 
 {{<contentTitle title="array_diff">}}
 
-Compare 2 or more arrays and return an array with the elements present in the 1st array that are not in the other arrays.
+Compare 2 or more arrays and returns an array with the elements present in the 1st array that are not in the other arrays.
 Syntax: `array_diff(array, array) :array`
 
 <span></span>
@@ -156,4 +156,100 @@ Array
   [3] => Target
 )
 */
+```
+
+{{<contentTitle title="array_map">}}
+
+Passes each element of an array through a custom function and returns an updated array of the values.
+Syntax: `array_map(aFunction, array1, array2, array3) :array`
+
+<span></span>
+```php
+<?php
+$phones = ["Samsung", "Iphone", "LG", "Nokia"];
+$updated = array_map(function ($phone) {
+  return $phone . " 2.0";
+}, $phones);
+print_r($updated);
+/*
+Array
+(
+  [0] => Samsung2.0
+  [1] => Iphone2.0
+  [2] => LG2.0
+  [3] => Nokia2.0
+)
+*/
+```
+{{<contentTitle title="array_filter">}}
+
+Works like array_map and loops through an array except array_filter removes elements that don't satisfy the condition.
+Syntax: `array_filter(array, aFunction) :array`
+
+<span></span>
+```php
+<?php
+$posts = ["title" => "This is a post", "date" => "25 July", "comments" => "25"];
+$updatedPost = array_filter($posts, function($value){
+  if($value == "25 July")
+    return false;
+    else
+    return true;
+});
+print_r($updatedPost);
+/*
+Array
+(
+  [title] => This is a post
+  [comments] => 25
+)
+*/
+```
+
+{{<contentTitle title="array_flip">}}
+
+Flips the array's keys with its values.
+Syntax: `array_flip(array) :array`
+
+<span></span>
+```php
+<?php
+$person = ["name" => "Sara", "age" => 28, "weight" => "135"];
+print_r(array_flip($person));
+/*
+Array
+(
+  [Sara] => name
+  [28] => age
+  [135] => weight
+)
+*/
+```
+
+{{<contentTitle title="array_key_exists">}}
+
+Finds the key within the array. Syntax: `array_key_exists(key, array) :bool`
+
+<span></span>
+```php
+<?php
+$house = ["price" => "$100M", "color" => "blue"];
+if(array_key_exists("price", $house)) {
+  echo "The house price is available!";
+}
+# The house price is available!
+```
+
+{{<contentTitle title="array_search">}}
+
+Search an entire array for a value and returns the key.
+Syntax: `array_search(string, array) :string`
+
+<span></span>
+```php
+<?php
+$clothes = ["color" => "red", "sizes" => "M", "store" => "H&M", "sale" => true];
+$key = array_search("H&M", $clothes);
+echo $key;
+// store
 ```
