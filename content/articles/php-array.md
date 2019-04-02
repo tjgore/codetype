@@ -253,3 +253,24 @@ $key = array_search("H&M", $clothes);
 echo $key;
 // store
 ```
+
+{{<contentTitle title="array_push">}}
+  
+ Add an element to an array.
+ Syntax: `array_push(array, element1, element2, elementNth) :array`
+ 
+ <span></span>
+ ```php
+ $tools = ["hammer"];
+ array_push($tools, "chain", "screw driver");
+ print_r($tools);
+ /*
+Array
+(
+  [0] => hammer
+  [1] => chain
+  [2] => srcew driver
+)
+*/
+ ```
+
