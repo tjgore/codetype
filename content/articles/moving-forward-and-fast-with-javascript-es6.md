@@ -28,12 +28,10 @@ Here's a list of some of the es6 features we will cover:
 - Array and object destructing
 - Rest Parameter and Spread Operator
 
-
-{{<contentTitle title="Let and Const">}}
+## Let and Const
 
 let is similar to var except that let is only accessible within its block levels. var data is wild an free and is only function scope.
 
-<span class="hl-info"></span>
 ```js
 if (true) {
   let tamed = 1
@@ -45,10 +43,8 @@ Output: 2
 trying to console log tamed will give an error
 */
 ```
-
 const is used to make a variable immutable, meaning that it can't be changed.
 
-<span class="hl-info"></span>
 ```js
 const age = 24
 age = 25 // This will produce an error
@@ -59,7 +55,6 @@ Objects and arrays are reference types.
 Therefore, you can edit a const array because you are editing the reference that holds your data and not the actual variable.
 {{%/note%}}
 
-<span class="hl-info"></span>
 ```js
 const heights = [5.11, 7.2, 3.9, 6.0]
 heights.pop()
@@ -68,11 +63,10 @@ console.log(heights)
 // Outpus: Array(3) [5.11, 7.2, 3.9, 4.10]
 ```
 
-{{<contentTitle title="Template Literals">}}
+## Template Literals
 
 This handy feature allows us to output variables in a string in one go.
 
-<span class="hl-info"></span>
 ```js
 let fullName = "TJ Gore"
 
@@ -87,7 +81,6 @@ console.log(`${fullName} loves to code!`)
 Make sure to use backticks instead of quotes with template literals.
 Backticks in es6 also allow us to simplify outputting multiple lines of text.
 
-<span class="hl-info"></span>
 ```js
 // ES5 old way
 let essay = "Hi everyone \n\
@@ -100,11 +93,10 @@ Thank you for reading and
 have a nice day.`
 ``` 
 
-{{<contentTitle title="Arrow functions">}}
+## Arrow functions
 
 Arrow function helps us to write an anonymous function cleaner. It also makes the this keyword work and behave properly.
 
-<span class="hl-info"></span>
 ```js
 // ES5 Old way
 const calculateTax = function(total, tax) {
@@ -132,7 +124,6 @@ You also don't need the function keyword to initiate a function.
 
 You can also use the arrow function with array functions such as map filter and find.
 
-<span class="hl-info"></span>
 ```js
 const numbers = [90, 5 , 24, 78, 13]
 let result
@@ -157,12 +148,11 @@ console.log(result)
 ```
 
 
-{{<contentTitle title="Array and Object Destructing">}}
+## Array and Object Destructing
 
 Destructing pulls out only the variables that are needed from an object or array and ignores the rest. Object variables must be pulled by name, while array variables names are made up since they are indexed and nameless.
 
 Object code example
-<span class="hl-info"></span>
 ```js
 const person = {
   name: "Tyndale",
@@ -202,7 +192,6 @@ getName(person)
 ```
 
 Array code example
-<span class="hl-info"></span>
 ```js
 const hobbies = ["drawing", "basketball", "football"]
 const [hobby1, hobby2] = hobbies
@@ -213,12 +202,11 @@ console.log(hobby2)
 
 This comes in pretty handy. Keep this one in your pocket.
 
-{{<contentTitle title="Rest and Spread Operators">}}
+## Rest and Spread Operators
 
 The rest and spread operator are another 2 new features introduced in es6 that I commonly use. 
 The rest operator bundles up the variables passed to a function into an array.
 
-<span class="hl-info"></span>
 ```js
 // ES5 Old way
 const toArray = (a, b) => {
@@ -244,7 +232,6 @@ toArray can take any number of args
 
 The spread operator takes an object or an array and pulls out all the variables and assigns them to the variable.
 
-<span class="hl-info"></span>
 ```js
 const fruits = ["apples", "bananas", "grapes", "strawberries"]
 let copyFruits = [fruits]

@@ -11,7 +11,7 @@
         "source" : "**/*.@(jpg|jpeg|gif|png|css|js|json)",
         "headers" : [ {
             "key" : "Cache-Control",
-            "value" : "max-age=1000000" //1 week+
+            "value" : "max-age=1"
         } ]
       }
     ]

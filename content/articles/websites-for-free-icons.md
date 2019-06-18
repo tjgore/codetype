@@ -18,45 +18,45 @@ The Web is in love with icons! Today, Icons play a big role in the design and fe
 
 To help everyone find and use these resources quickly, I created a list of the top 10 sites for icons. All of them are free to download and use in personal or commercial projects. Enjoy!
 
-<h2 class="mt-5 pt-5">1. FlatIcon</h2>
+## 1. FlatIcon
 
 [![FlatIcon](/images/articles/flaticon.jpg "FlatIcon")](https://www.flaticon.com/)
 
-<h2 class="mt-5 pt-5">2. Google Material Design Icon</h2>
+## 2. Google Material Design Icon
 
 [![Google-material](/images/articles/material.jpg "Google Material")](https://material.io/tools/icons/)
 
-<h2 class="mt-5 pt-5">3. Icon Monstr</h2>
+## 3. Icon Monstr
 
 [![Icon Monstr](/images/articles/iconmonstr.jpg "Icon Monstr")](https://iconmonstr.com/)
 
 
-<h2 class="mt-5 pt-5">4. Mr.Icon</h2>
+## 4. Mr.Icon
 
 [![Mr.Icon](/images/articles/mricon.jpg "Mr.Icon")](http://mricons.com/)
 
-<h2 class="mt-5 pt-5">5. Dry Icon</h2>
+## 5. Dry Icon
 
 [![Dry Icon](/images/articles/dryicons.jpg "Dry Icon")](https://dryicons.com/free-icons)
 
-<h2 class="mt-5 pt-5">6. Easy Icon</h2>
+## 6. Easy Icon
 
 [![Easy Icon](/images/articles/easyicon.jpg "Easy Icon")](http://www.easyicon.net/)
 
-<h2 class="mt-5 pt-5">7. Graphic Burger</h2>
+## 7. Graphic Burger
 
 [![Graphic Burger](/images/articles/graphicburger.jpg "Graphic Burger")](http://graphicburger.com/icons-set/)
 
-<h2 class="mt-5 pt-5">8. Free Icons Web</h2>
+## 8. Free Icons Web
 
 [![Free Icons Web](/images/articles/freeiconsweb.jpg "Free Icons Web")](http://www.freeiconsweb.com/free-icons)
 
 
-<h2 class="mt-5 pt-5">9. Icon Finder</h2>
+## 9. Icon Finder
 
 [![Icon Finder](/images/articles/iconfinder.jpg "Icon Finder")](https://www.iconfinder.com/icons/1011335/email_envelope_mail_message_send_icon#size=128)
 
-<h2 class="mt-5 pt-5">10. Font Awesome</h2>
+## 10. Font Awesome
 
 [![Font Awesome](/images/articles/fontawesome.jpg "Font Awesome")](http://fontawesome.io/icons/)
 

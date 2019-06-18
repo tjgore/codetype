@@ -11,7 +11,7 @@ keywords: ["php frameworks for rapid development", "5 popular frameworks you sho
 draft: false
 ---
 
-{{<contentTitle title="Introduction">}}
+## Introduction
 
 According to [w3tech](https://w3techs.com/), PHP is the most popular server side programming language in the world. So you can only image how many developers use PHP on a daily basis.
 
@@ -37,7 +37,7 @@ You are not required to use a framework and will not get struck by lighting if y
 Let’s dive into the list of PHP Frameworks you can use for rapid web development.
 
 
-{{<contentTitle title="1. Laravel">}}
+## 1. Laravel
 
 ![Laravel](/images/articles/laravel.png "Laravel")
 
@@ -59,7 +59,7 @@ Points to note:
 - [Laravel’s github account](https://github.com/laravel/laravel) has 44,019 stars and 4,556 watches.
 - A general job search for laravel developers on indeed.com displayed 539 job post.
 
-{{<contentTitle title="2. Symfony">}}
+## 2. Symfony
 
 ![Symfony](/images/articles/symfony.png)
 
@@ -75,7 +75,7 @@ Points to note:
 - A general job search for symfony developers on indeed.com displayed 249 job post.
 
 
-{{<contentTitle title="3. CodeIgniter">}}
+## 3. CodeIgniter
 
 ![codeigniter](/images/articles/codeigniter.png)
 
@@ -93,7 +93,7 @@ Points to note:
 A general job search for codeIgniter developers on indeed.com displayed 108 job post.
 
 
-{{<contentTitle title="4. CakePHP">}}
+## 4. CakePHP
 
 ![CakePHP](/images/articles/cakephp.png)
 
@@ -109,7 +109,7 @@ Points to note:
 - A general job search for cakephp developers on indeed.com displayed 82 job post.
 
 
-{{<contentTitle title="5. Phalcon">}}
+## 5. Phalcon
 
 ![Phalcon](/images/articles/phalcon.png)
 
@@ -134,7 +134,7 @@ Points to note:
 - A general job search for phalcon developers on indeed.com displayed 8 job post.
 
 
-{{<contentTitle title="Wrapping it up">}}
+## Wrapping it up
 
 Whichever framework you choose is not as crucial as you may think and you do not have to learn all of them.
 

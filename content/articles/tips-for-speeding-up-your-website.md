@@ -23,9 +23,9 @@ Walmart also experienced a 2% increase in conversions for every 1 second of impr
 
 Clearly, improving your website speed is crucial in keeping customer’s satisfaction and your business profits high. So today, I’m going to share with you 10 tips that can help you speed up your sites to increase page views, increase customer’s satisfaction, and increase conversions.
 
-<p class="font-weight-bold">Always make a backup before making any changes to your website</p>.
+**Always make a backup before making any changes to your website**.
 
-{{<contentTitle title="1. Minimize HTTP Requests">}}
+## 1. Minimize HTTP Requests
 
 An HTTP request is a computer asking permission to download any files from a server that is needed in order for your site to be viewed properly.
 
@@ -48,7 +48,7 @@ Some ways to improve your site speed is to simplify your design and write good l
 - Avoid using plugins and libraries
 - Minimize redirects
 
-{{<contentTitle title="2. Minify Resources ( HTML, CSS, and Javascript)">}}
+## 2. Minify Resources ( HTML, CSS, and Javascript)
 
 Minify your files simple means removing any unnecessary elements in your code such as: line breaks, comments, extra whitespace and indentations. Every element can add to the size of your files which in turn increases your sites load time.
 
@@ -66,14 +66,14 @@ Large images take a lot of time to load so it is important to keep your images a
 
 [Here](http://optimizilla.com/) is a handy tool for lossy compressing images.
 
-{{<contentTitle title="4. Reduce the number of plugins and add-ons">}}
+## 4. Reduce the number of plugins and add-ons
 
 Too many plugins can slow your site down, create security issues, and cause crashes and other technical problems.
 
 Try deactivating or removing unnecessary plug-ins and slow plug-ins. Also keeping plug-ins up to date can help fix slow plugins.
 
 
-{{<contentTitle title="5. Gzip Compression">}}
+## 5. Gzip Compression
 
 You have probably tried compressing a file on your computer and you’ve seen a massive reduction in the file size. A 60mb file can be compressed to 40mb, saving you 20mb. Gzip compression works in the same way, but for websites.
 
@@ -84,33 +84,33 @@ According toYahoo, Gzip can reduce website load time by about 70%.
 - Apache: Use [mod_deflate](http://httpd.apache.org/docs/current/mod/mod_deflate.html)
 - Nginx: Use [HttpGzipModule](http://nginx.org/en/docs/http/ngx_http_gzip_module.html)
 
-{{<contentTitle title="6. Enable Keep-Alive">}}
+## 6. Enable Keep-Alive
 
 Usually, when a visitor’s web browser tries to request a file from your web server, it will grab each file individually; in other words, a connection opens and closes for each file needed for your site. This uses more processing power and memory and eventually leads to a slower website if there are a lot of files.
 
 Enabling HTTP keep-alive ensures that all file requests to your server will be made via a single open connection, leading to a much faster website for your users.
 
-{{<contentTitle title="7. Use a Content Delivery Network (CDN)">}}
+## 7. Use a Content Delivery Network (CDN)
 
 A content delivery network is a collection of web servers distributed across multiple locations to deliver content more efficiently to users. The server with the fewest network jumps or the server with the quickest response time is chosen. Therefore a website with a CDN will be loaded from the nearest server to the visitor.
 
 You can checkout CDN hosting with [Cloudflare](https://www.cloudflare.com/).
 
-{{<contentTitle title="8. Utilize Browser Caching">}}
+## 8. Utilize Browser Caching
 
 Browser caching ensures a much faster experience for your website visitors by storing a static version of your website on their browser and serving them that version until your website is updated.
 
 Browser caching ensures a much faster experience for your website visitors by storing a static version of your website on their browser and serving them that version until your website is updated.
 
-{{<contentTitle title="9. Placing Javascript at the bottom">}}
+## 9. Placing Javascript at the bottom
 
 Placing javascript in the document head stops the progressive rendering of a webpage until the entire javascript has been downloaded. Imagine you have a large javascript file or library, that means your webpage content won't start to download until the javascript is finished. This being the case, all your javascript should be placed at the bottom, unless they are necessary for the webpage to be viewed.
 
-{{<contentTitle title="10. Avoid Bad Requests">}}
+## 10. Avoid Bad Requests
 
 Broken links and pages result in 404/410 errors. These increase the amount of wasteful HTTP requests. Fix your broken URLs especially image. Along with broken links comes the fact that visitors really dislike broken links.
 
-{{<contentTitle title="Now Test Your Site">}}
+## Now Test Your Site
 
 After implementing the above tips, you should test your website speed to see if there’s a difference. Here are some websites you can use to test out your site:
 
@@ -120,7 +120,7 @@ After implementing the above tips, you should test your website speed to see if 
 - [Google Pagespeed Insights](https://developers.google.com/speed/pagespeed/insights/)
 
 
-{{<contentTitle title="Final Thoughts">}}
+## Final Thoughts
 
 Today, having a fast website is important for success on the web. Of course, a site speed is not the main goal but even a great website with a bad load time will find it hard to retain visitors.
 

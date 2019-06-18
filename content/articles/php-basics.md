@@ -12,13 +12,13 @@ keywords: ["php", "programming", "php basics", "php tutorial", "php crash course
 draft: false
 ---
 
-{{<contentTitle title="What is PHP?">}}
+## What is PHP?
 
 PHP is a server side scripting(programming) language used mostly for web development but may be used for writing software in a wide variety of applications, which also makes PHP a general-purpose programming language.
 
 PHP stands for Hypertext Preprocessor and was created by Rasmus Lerdorf in 1994. PHP can only run on operating systems that have the PHP interpreter installed. PHP files end with “.php” and may contain HTML, CSS, Javascript and PHP tags.
 
-{{<contentTitle title="Why use PHP?">}}
+## Why use PHP?
 
 Most people use PHP without realising it, not for programming but for accessing content from websites. About 80% of the web uses PHP to dynamically display their website’s content.
 
@@ -34,7 +34,7 @@ Below are a list of reasons why you may want to use PHP:
 - PHP is the most supported programming language on web hostings. Almost, if not all web hosting companies, have PHP installed.
 - PHP has support for many databases.
 
-{{<contentTitle title="Prerequisite">}}
+## Prerequisite
 
 To start using PHP, we need the right development environment.
 
@@ -47,15 +47,14 @@ If you would like to set up an environment on your own machine, you can find det
 
 We will go through the basics of PHP programming and learn how to run PHP programs. You will see how to output text, do some math, loops, and much more.
 
-{{<contentTitle title="Variables and Data Types">}}
+## Variables and Data Types
 
 In PHP, variables start with a $ followed by an alpha-numeric(A-z, 0-9, and _) name beginning with a letter or underscore. Variables are case sensitive, therefore variables with the same name but different cases are not equal.
 
 Varibales are used to store data or information for later use.
 
-Another important detail is that all php scripts must start with <span class="notice">&lt;?php</span>
+Another important detail is that all php scripts must start with `<?php`
 
-<span class="hl-info"></span>
 ```php
 <?php
   $number = 2; // integer
@@ -86,11 +85,10 @@ The following are data types for PHP:
 As shown above $number is an integer, $_value is a float, $hi is a string, and $up is a boolean.
 
 
-{{<contentTitle title="Outputting Variables/Data">}}
+## Outputting Variables/Data
 
 PHP displays variables/data by using the echo or print statement. You can also include some html tags within the echo statement.
 
-<span class="hl-info"></span>
 ```php
 <?php
 $txt = "We like PHP";
@@ -99,7 +97,7 @@ echo "<h1>" . $txt . "</h1>";  // displays We like PHP
 echo $link . " is awesome!";  // displays setcodetype.com is awesome!
 ```
 
-{{<contentTitle title="Operators">}}
+## Operators
 
 Operators are symbols used to perform certain actions such as arithmetic, logic and comparison on variables and data.
 
@@ -114,7 +112,6 @@ Operators are divided into the following groups:
 
 Arithmetic operators are used to perform arithmetic operations such as addition and subtraction.
 
-<span class="hl-info"></span>
 ```php
 <?php
 $a = 2;
@@ -128,7 +125,6 @@ echo  $b % $a;  // 5 % 2 = 1
 
 Assignment operators are used to write a numeric value to a variable. The most common assignment operator you will see is “=”.
 
-<span class="hl-info"></span>
 ```php
 <?php
 $a = 2;
@@ -149,7 +145,6 @@ $a %= 2;  // 2 % 2 = 0
 
 Comparison operators are used to compare 2 or more variables.
 
-<span class="hl-info"></span>
 ```php
 <?php
 $a = 5;
@@ -168,7 +163,6 @@ var_dump($a >= $b);  // result:true, returns true if 5 is greater than or equal 
 
 The Increment/decrement operators are used to increase/decrease a numeric variable by one.
 
-<span class="hl-info"></span>
 ```php
 <?php
 $a = 5;
@@ -192,7 +186,6 @@ echo $a;  //4
 
 The logical operators are used to perform conditional statements, therefore we will use the if statement to demonstrate the logical operators. The If statement can only run if the condition is true. The if statement syntax is as shown below. We will go into more details about conditional statement later in this article.
 
-<span class="hl-info"></span>
 ```php
 <?php
 /*
@@ -233,7 +226,6 @@ if (!$a) {
 
 The string operators are used to concatenate strings, which simply means adding 2 strings together.
 
-<span class="hl-info"></span>
 ```php
 <?php
 $txt = "Yay, ";
@@ -245,13 +237,12 @@ echo $txt; // displays "Yay, Yay, "
 
 ```
 
-{{<contentTitle title="Strings">}}
+## Strings
 
 Strings are character within single or double quotes.
 
 Strings within single quotes do not escape characters nor expand expand variables.
 
-<span class="hl-info"></span>
 ```php
 <?php
 // These are all strings
@@ -268,7 +259,6 @@ echo "Today is a $a day"; // "Today is a good day"
 
 Below are some commonly used functions to manipulate strings. A function is a block of code that can be repeated throughout your program. We will learn and see more examples of functions further in this article.
 
-<span class="hl-info"></span>
 ```php
 <?php
 
@@ -303,7 +293,7 @@ var_dump(explode(“ ”, “i love php”)):
 echo str_word_count(“I love Php”);
 ```
 
-{{<contentTitle title="Arrays">}}
+## Arrays
 
 Arrays are a very useful and unlike other data types are used for storing multi values at the same time. You can picture arrays as a variable that holds an ordered list called elements.
 
@@ -318,7 +308,6 @@ There are 3 types of arrays:
 - And Multidimensional arrays (advanced)
 
 Indexed Arrays
-<span class="hl-info"></span>
 ```php
 <?php
 $persons = ["Peter", "Sara", "Mary", "John"];
@@ -331,7 +320,6 @@ Indexed arrays always start at 0 therefore an array with 3 values has indexes of
 
 
 Associative Array
-<span class="hl-info"></span>
 ```php
 <?php
 $cars = ["BMW" => "red", "Toyota" => "blue"];
@@ -343,7 +331,6 @@ echo $cars["Honda"]; // orange
 
 Some common built in PHP array functions are:
 
-<span class="hl-info"></span>
 ```php
 <?php
 
@@ -388,7 +375,7 @@ echo array_sum($number);
 $reversed_number = array_reverse($number):
 ```
 
-{{<contentTitle title="Loops">}}
+## Loops
 
 The loop statement, as the name implies, repeats a block of code a given number of times or until a condition is met.
 
@@ -403,7 +390,6 @@ For loops are best used when you know the amount of times you want to repeat you
 
 The while loop is used for when you don’t know how many times you need to repeat your code but when you know what conditions must be met to stop the loop.
 
-<span class="hl-info"></span>
 ```php
 <?php
 
@@ -450,7 +436,6 @@ The foreach array is commonly used for looping over arrays.
 
 For every iteration the value of the current array element is assigned to $value, and the index is incremented by one, until there are no more elements in the array.
 
-<span class="hl-info"></span>
 ```php
 <?php
 
@@ -469,7 +454,7 @@ foreach ($colors as $index => $value) {
 //result: tall:red long:blue short:orange wide:purple
 ```
 
-{{<contentTitle title="Conditional Statements">}}
+## Conditional Statements
 
 Conditional statements are used in programming to make decisions. Conditional statements are used to perform actions based on conditions.
 
@@ -480,7 +465,6 @@ The following are useful conditional statements that you will commonly use:
 - If ... elseif ... else: runs some code if the first condition is true else checks the second condition and run its code or else default to the last block of code if all previous conditions are false.
 - And switch: depending on the value passed into the switch, runs the block of code which the condition satisfies.
 
-<span class="hl-info"></span>
 ```php
 <?php
         
@@ -532,7 +516,7 @@ The following conditions are considered false:
 - special value NULL
 {{%/note%}}
 
-{{<contentTitle title="Functions">}}
+## Functions
 
 A function is a block of code that can be executed repeatedly across your program. It is a compartmentalized part of code and modular in nature. It is good programming practice to modularize your code with functions.
 
@@ -540,7 +524,6 @@ PHP has hundreds of built-in functions that assist with common tasks. You have a
 
 Functions start with the keyword function and just as a variable an alpha-numeric(A-z, 0-9, and _) name beginning with a letter or underscore. Function names should be descriptive of what they do. To run a function you must call the function by simple writing its name followed by ().
 
-<span class="hl-info"></span>
 ```php
 <?php
 
@@ -556,7 +539,6 @@ sayHi(); // call the function to execute its block of code
 
 Function arguments are variables passed to a function to be used within the function. Arguments are passed within the function (). You can pass as many arguments as you like and separate them with commas.
 
-<span class="hl-info"></span>
 ```php
 <?php
 
@@ -591,7 +573,7 @@ echo $welcome;
 //result: Hello there! How are you?
 ```
 
-{{<contentTitle title="Summary">}}
+## Summary
 
 PHP is a fun and easy programming language to use. Throughout this article you have learned what variables are, how to use them and their different data types, loops, conditions, and functions.
 

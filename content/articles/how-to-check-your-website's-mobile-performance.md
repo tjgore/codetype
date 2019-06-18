@@ -23,7 +23,7 @@ Websites that aren’t mobile-friendly experience a drop in visitor retention an
 here are many different ways to test your websites mobile compatibility. Here are 4 ways you can check your sites mobile friendliness.
 
 
-{{<contentTitle title="1. Actual Mobile Devices">}}
+## 1. Actual Mobile Devices
 
 Using actual mobile smart phones, tablets and other mobile devices is the best way for testing your websites mobile friendliness. Why? Because there are many parts of the experience that can’t be faked, such as: network conditions, pixel densities, the relative size of tap targets, and real page load times. Yes, this approach is not practical because it is extremely time consuming but it gives the best results.
 
@@ -32,8 +32,7 @@ Get family and friends to view your site on their devices and give you feedback.
 
 ![mobile-devices](/images/articles/device.jpg)
 
-
-<h2 class="h3 font-weight-bold mt-5 pt-5">
+<h2>
   <a href="https://testmysite.thinkwithgoogle.com/" target="_blank" class="d-block gray-800">
     2. Think with Google
   </a>
@@ -44,7 +43,7 @@ Google offers a site that helps you to check your websites’ mobile friendlines
 ![google-mobile-checker](/images/articles/googlemb.png)
 
 
-<h2 class="h3 font-weight-bold mt-5 pt-5">
+<h2>
   <a href="http://ready.mobi/" target="_blank" class="d-block gray-800">
     3. MobiReady
   </a>
@@ -55,7 +54,7 @@ MobiReady is another really good website that allows you to test your site. Mobi
 ![mobiready](/images/articles/mobi.png)
 
 
-<h2 class="h3 font-weight-bold mt-5 pt-5">
+<h2>
   <a href="https://www.browserstack.com/responsive" target="_blank" class="d-block gray-800">
     4. BrowserStack
   </a>
@@ -67,7 +66,7 @@ The down side about browserstack is that it is not free like the others mentione
 
 ![browserstack](/images/articles/browser.png)
 
-{{<contentTitle title="What do you use to test your site?">}}
+## What do you use to test your site?
 
 This is a very short list of tools to use to test your mobile sites performance. There are many more tools available but in my opinion these are my favorite and most used tools. If you know of any better tools, feel free to share with me what you use and also share what you think about the ones mentioned above.
 

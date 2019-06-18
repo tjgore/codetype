@@ -12,7 +12,7 @@ keywords: ["Dependency injection in PHP with examples", "Understanding Dependenc
 draft: false
 ---
 
-{{<contentTitle title="Introduction">}}
+## Introduction
 
 Last week I had a technical interview and questions about dependency injection came up and I was quite lost. So I took the initiative to learn more about the topic and write on it for a better understanding. 
 
@@ -20,7 +20,7 @@ I will cover what is dependency injection, explain it as simple as possible, and
 
 Let’s jump right into the definition of dependency injection.
 
-{{<contentTitle title="What is Dependency Injection?">}}
+## What is Dependency Injection?
 
 In its simplest form, Dependency Injection is a software design pattern for writing better maintainable, modular and testable code. The main goal is to decouple objects. 
 
@@ -57,11 +57,10 @@ The service must implement an interface that is passed to a client’s setter or
 You will see examples of all 3 types below.
 
 
-{{<contentTitle title="How to use Dependency Injection?">}}
+## How to use Dependency Injection?
 
 Here’s an example of a class without dependency injection.
 
-<span class="hl-info"></span>
 ```php
 <?php
 
@@ -113,11 +112,10 @@ Right now there is no way to do that since the Accountant class is hardcoded int
 Let’s look at an alternative with dependency injection.
 
 
-{{<contentTitle title="Constructor Injection">}}
+## Constructor Injection
 
 Below is an example of the first type of dependency injection, the Constructor Injection. It's called the Constructor Injection because the dependency is injected into the client's construct method.
 
-<span class="hl-info"></span>
 ```php
 <?php
 class Accountant {
@@ -172,11 +170,10 @@ Passing the service to the client, rather than allowing a client to build or fin
 We can go a set further and make the Accountant class interchangeable with other classes to give us even more flexibility with interfaces. Before we go into Interface Injection, we will look at Setter Injection which is very similar to Constructor Injection. 
 
 
-{{<contentTitle title="Setter Injection">}}
+## Setter Injection
 
 With Constructor Injections, you must include the service while Setter Injections allow the service injection to be optional.
 
-<span class="hl-info"></span>
 ```php
 <?php
 
@@ -233,11 +230,10 @@ In the Setter Injection example, we are no longer passing the service to Desk cl
 As you should also see, the setEmployee() setter method dependency is optional and the Desk object still works. This allows the Desk class to be a bit more flexible.
 
 
-{{<contentTitle title="Interface Injection">}}
+## Interface Injection
 
 The interface injection gives the most flexibility because it allows you to swap classes without the need to change the code for the client. Check out the 2 Interface Injection examples below.
 
-<span class="hl-info"></span>
 ```php
 <?php
 
@@ -316,7 +312,6 @@ This allows you to write and design more modular and easier to maintain code.
 Here is another example. Break it down just as the first example we previously demonstrated. 
 
 
-<span class="hl-info"></span>
 ```php
 <?php
 

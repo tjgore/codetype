@@ -11,24 +11,24 @@ keywords: ["gulp", "gulp for beginners", "install gulp", "sass to css", "minify 
 draft: false
 ---
 
-{{<contentTitle title="What is Gulp?">}}
+## What is Gulp?
 
 Gulp is a javascript task runner for web developers. This task runner is a tool used to automate time-consuming repetitive task such as: minifying css and html, optimizing javascript, reloading your browser , and many other redundant tasks.
 
 Gulp is referred to as a build tool because it runs tasks for building websites. Gulp tasks are coded in javascript. In order to run Gulp tasks, we need Node.js to be installed and the command line.
 
-{{<contentTitle title="Why use Gulp?">}}
+## Why use Gulp?
 
 Why not? Gulp is a extremely useful tools that cuts out repetitive tasks. Who doesn’t want to make repetitive tasks easier and faster?
 
 In the case of Gulp vs [Grunt](https://gruntjs.com/), which is another popular task runner, Gulp advantages are it is shorter, simpler and faster than Grunt’s tasks.
 
-{{<contentTitle title="Prerequisites">}}
+## Prerequisites
 
 - Basic knowledge of HTML , CSS, and Javascript
 - Basic knowledge of the command line
 
-{{<contentTitle title="Goals">}}
+## Goals
 
 In this article you will learn a few of the basics to get started using gulp and experience an increase in your productivity. I will show you how to install gulp and different plugins, along with how to use these plugins.
 
@@ -47,12 +47,11 @@ I will be using Ubunutu OS throughout this article, for mac users installing and
 
 Let’s get started with Gulp.
 
-{{<contentTitle title="Setting up a Project Directory">}}
+## Setting up a Project Directory
 
 Since Gulp runs its tasks on files, to get started we need a project to work with. You can clone this [gulp-beginner](https://github.com/tjgore/gulp-beginner/tree/start) repository using git, or you can go to the link and download the files by clicking the “clone or download” green button and download the zip.
 
-<span class="hl-info"></span>
-```terminal
+```bash
 $ git clone https://github.com/tjgore/gulp-beginner/tree/start
 
 ```
@@ -62,8 +61,8 @@ In this gulp-beginner directory you should have:
 - **src folder**: this is where your project(html, css, js, etc..) files will be located.
 - **gulpfile.js** file: is the file that will hold your javascript gulp tasks
 
-<span class="hl-info">folder structure</span>
 ```bash
+# folder structure
 | - src/
   | - fonts/
   | - images/
@@ -78,54 +77,49 @@ To skip ahead and see the completed gulpfile.js code you can checkout the [maste
 
 If you open the index.html file you will realise it does not have any css styling, this is because you need to compile your sass to css using gulp. Continue reading to see how you will achieve this later on.
 
-
-{{<contentTitle title="Installing Node.js">}}
+## Installing Node.js
 
 In order to you use gulp you need to install nodejs. Node js, according to nodejs.org is “a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js' package ecosystem, npm, is the largest ecosystem of open source libraries in the world.”
 
 
-Enter in your terminal <span class="notice">sudo apt-get install nodejs</span> to install node.js, and <span class="notice">sudo apt-get install npm</span> to install node package manager.
+Enter in your terminal `sudo apt-get install nodejs` to install node.js, and `sudo apt-get install npm` to install node package manager.
 
 Npm will be used to install gulp plugins. If you already have nodejs installed but want to update it, see how to [here](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions).
 
-<span class="hl-info">termnal</span>
 ```bash
 $ sudo apt-get install nodejs
 $ sudo apt-get install npm
 ```
-To check if they were installed successfully check the software version of both nodejs and npm by using <span class="notice">nodejs -v; npm -v</span>.
+To check if they were installed successfully check the software version of both nodejs and npm by using `nodejs -v; npm -v`.
 
 
-<span class="hl-info">termnal</span>
 ```bash
 $ nodejs -v; npm -v
   v6.11.4
   3.10.10
 ```
 
-{{<contentTitle title="Installing Gulp Globally">}}
+## Installing Gulp Globally
 
 Now that you have Node.js and npm installed, you can use npm to install gulp.
 
-Enter <span class="notice">sudo npm install -g gulp</span>. This will install gulp so that you can use it anywhere on your computer, (-g: globally).
+Enter `sudo npm install -g gulp`. This will install gulp so that you can use it anywhere on your computer, (-g: globally).
 
-<span class="hl-info">termnal</span>
 ```bash
 $ sudo npm install -g gulp
 ```
 
-If all your commands executed successfully, you have successfully installed gulp throughout your computer. Enter <span class="notice">gulp -v</span> to verify.
+If all your commands executed successfully, you have successfully installed gulp throughout your computer. Enter`gulp -v` to verify.
 
 
-{{<contentTitle title="Initiating Node and adding Gulp to your gulp-beginners directory">}}
+## Initiating Node and adding Gulp to your gulp-beginners directory
 
 Within your gulp-beginner directory, you need to initiate node and gulp.
 
-Let’s start with <span class="notice">npm init</span> You will be prompted to fill out some details. If you don't have the information or you are unsure what to input, just press enter.
+Let’s start with `npm init` You will be prompted to fill out some details. If you don't have the information or you are unsure what to input, just press enter.
 
 This command will create a package.json file with the input you submitted.
 
-<span class="hl-info">terminal</span>
 ```js
 $ npm init
   {
@@ -155,11 +149,10 @@ $ npm init
   }
 ```
 
-Next, we have to install gulp within our working directory with <span class="notice">npm install gulp --save-dev</span>. Yes, we are installing gulp again but it is not global but within the project.
+Next, we have to install gulp within our working directory with `npm install gulp --save-dev`. Yes, we are installing gulp again but it is not global but within the project.
 
 This time installing gulp creates a node_modules folder and within that folder you can search and should find a gulp folder.
 
-<span class="hl-info">terminal</span>
 ```bash
 $ npm install gulp --save-dev
 ```
@@ -170,25 +163,28 @@ Before moving forward you should test to see if gulp is working. All your gulp t
 
 The first step we must do before anything else is to require our gulpfile. The required statement tells Node to find the gulp plugin within the node_modules folder and assign its content to the variable gulp.
 
-<span class="hl-info">gulpfile.js</span>
+**gulpfile.js**
+
 ```js
 var gulp = require("gulp");
 ```
 
 You can create a gulp task using the gulp variable as shown below.
 
-<span class="hl-info">gulpfile.js</span>
+**gulpfile.js**
+
 ```js
 gulp.task("your-task-name", function (){
   console.log("Gulp is awesome")
 });
 ```
 
-<span class="notice">Your-task-name</span> can be named anything you want.
+`Your-task-name` can be named anything you want.
 
-To run the task in your terminal you should enter <span class="notice">gulp your-task-name</span>.
+To run the task in your terminal you should enter `gulp your-task-name`.
 
-<span class="hl-info">gulpfile.js</span>
+**gulpfile.js**
+
 ```js
 $ gulp your-task-name
 
@@ -202,7 +198,7 @@ If you see "Gulp is awesome" as your output , you have successfully installed gu
 
 We are now ready to start using gulp and writing more gulp tasks for our project.
 
-{{<contentTitle title="Installing Gulp plugins">}}
+## Installing Gulp plugins
 
 Gulp by itself does not do much for us.
 
@@ -212,7 +208,6 @@ To install plugins you use the npm install plugin-name --save-dev command. The �
 
 You can find all the plugins you install in the package.json file.
 
-<span class="hl-info">terminal</span>
 ```bash
 $ npm install gulp-sass
 ```
@@ -230,13 +225,14 @@ The plugins you will be using throughout the rest of this article are:
 - **gulp-htmlmin**: minify HTML files
 - **run-sequence**: run a series of tasks in a specific order
 
-{{<contentTitle title="Compiling Sass to Css">}}
+## Compiling Sass to Css
 
-You can use the <span class="notice">gulp-sass</span> plugin in Gulp to compile sass to css. To use plugins within your gulpfile.js file, you simply require them as you did with gulp and create your tasks
+You can use the `gulp-sass` plugin in Gulp to compile sass to css. To use plugins within your gulpfile.js file, you simply require them as you did with gulp and create your tasks
 
-Give the task a name and use it with <span class="notice">.pipe()</span> as shown in the example below.
+Give the task a name and use it with `.pipe()` as shown in the example below.
 
-<span class="hl-info">gulpfile.js</span>
+**gulpfile.js**
+
 ```js
 var sass = require("gulp-sass");
 // other tasks
@@ -249,7 +245,7 @@ gulp.task("sassCss", function(){
 
 ```
 
-As you can see I included a few more functions not mentioned before, the <span class="notice">gulp.src() and gulp.dest()</span>. These are 2 of gulp's common functions.
+As you can see I included a few more functions not mentioned before, the `gulp.src() and gulp.dest()`. These are 2 of gulp's common functions.
 
 You have to edit your gulp.src() to let gulp know where to get your sass files which are located in src/scss/ folder. You also have to edit your gulp.dest to where you want your compiled files to be placed.
 
@@ -264,11 +260,9 @@ Below is a list of common functions used in gulp:
 
 Let’s automate more tasks and enhancing our project's workflow further.
 
-
-{{<contentTitle title="Globbing in Node">}}
+## Globbing in Node
 
 Globbing patterns are like regular expressions. These allow you to add multiple files to gulp.src() and gulp.watch(), you will see how to use gulp.watch() later.
-
 
 4 Globbing patterns are:
 
@@ -283,7 +277,8 @@ Eg. hello.scss, hello.css or hello.sass are all matches.
 
 You can also include multiple files to the gulp.src() with an array. Take alook at the gulp tasks below to see how this is done.
 
-<span class="hl-info">gulpfile.js</span>
+**gulpfile.js**
+
 ```js
 gulp.task("sassCss", function(){
   return gulp.src(["src/scss/main.scss", "src/scss/bootstrap.scss"])
@@ -294,15 +289,16 @@ gulp.task("sassCss", function(){
 
 This tasks would take in 2 sass files,compile them to css and output the files in src/css.
 
-{{<contentTitle title="Minifying Css">}}
+## Minifying Css
 
 Imagine having to minify all your css files every time you make a change. That could be very annoying and inconvenient but gulp makes minifying files quick and easy.
 
-Let’s add the <span class="notice">gulp-cssmin</span> plugin and chain it to your first task. This plugin will minify the css we compiled from our sass and add it to our sassCss tasks using the .pipe() function.
+Let’s add the `gulp-cssmin` plugin and chain it to your first task. This plugin will minify the css we compiled from our sass and add it to our sassCss tasks using the .pipe() function.
 
-Don't forget to install gulp-cssmin <span class="notice">npm install gulp-cssmin --save-dev</span>.
+Don't forget to install gulp-cssmin `npm install gulp-cssmin --save-dev`.
 
-<span class="hl-info">gulpfile.js</span>
+**gulpfile.js**
+
 ```js
 var minify = require("gulp-cssmin");
 
@@ -316,9 +312,8 @@ gulp.task("sassCss", function(){
 });
 ```
 
-Enter <span class="notice">gulp sassCss</span> in your terminal to run the task. This time around the task will compile sass to css, minify it and save the output into app/css folder.
+Enter `gulp sassCss` in your terminal to run the task. This time around the task will compile sass to css, minify it and save the output into app/css folder.
 
-<span class="hl-info">terminal</span>
 ```bash
 $ gulp sassCss
 
@@ -327,17 +322,17 @@ $ gulp sassCss
   [13:45:44] Finished 'sassCss' after 836 ms
 ```
 
-You can also change the name of your gulp tasks to describe what the tasks does. Let's change sassCss to sassCssMini. You will now run the the tasks with <span class="notice">gulp sassCssMini</span> command instead of gulp sassCss.
+You can also change the name of your gulp tasks to describe what the tasks does. Let's change sassCss to sassCssMini. You will now run the the tasks with `gulp sassCssMini` command instead of gulp sassCss.
 
-{{<contentTitle title="Renaming .css files to -min.css">}}
+## Renaming .css files to -min.css
 
-Again we can add another plugin called <span class="notice">gulp-rename</span> and chain it within the sassCssMini task.
+Again we can add another plugin called `gulp-rename` and chain it within the sassCssMini task.
 
 This plugin will rename your .css files to -min.css by adding the suffix option for the plugin. To see all the documentation and options, you can check out the github repo for each plugin.
 
 Do not forget to install and require all your gulp plugins.
 
-<span class="hl-info">gulpfile.js</span>
+**gulpfile.js**
 ```js
 var rename = require("gulp-rename");
 
@@ -352,11 +347,10 @@ gulp.task("sassCss", function(){
 });
 ```
 
-Run <span class="notice">gulp sassCssMini</span> task again and check your src/css folder.
+Run `gulp sassCssMini` task again and check your src/css folder.
 
 Your .css files should be -min.css.
 
-<span class="hl-info">terminal</span>
 ```bash
 $ gulp sassCssMini
 
@@ -367,19 +361,21 @@ $ gulp sassCssMini
 
 Delete the old main.css file in your src/css folder and edit your index.html file to use the main-min.css.
 
-<span class="hl-info">index.html</span>
+**index.html**
+
 ```html
 <title>Gulp Tutorial</title>
   <link rel="stylesheet" type="text/css" href="./css/main-min.css">
 ```
 
-{{<contentTitle title="Removing unnecessary css from bloated css frameworks">}}
+## Removing unnecessary css from bloated css frameworks
 
-Have you ever used a css framework such as Bootstrap, Foundations or Bulma and don’t need all the css styles available? Well the <span class="notice">gulp-uncss</span> plugin solves this issue by removing all the style from your css files you are not using in your html files.
+Have you ever used a css framework such as Bootstrap, Foundations or Bulma and don’t need all the css styles available? Well the `gulp-uncss` plugin solves this issue by removing all the style from your css files you are not using in your html files.
 
-Install the plugin with <span class="notice">npm install gulp-uncss --save-dev</span>.
+Install the plugin with `npm install gulp-uncss --save-dev`.
 
-<span class="hl-info">gulpfile.js</span>
+**gulpfile.js**
+
 ```js
 var removeCss = require("gulp-uncss");
 
@@ -393,9 +389,9 @@ return gulp.src("src/css/*-min.css")
 });  
 ```
 
-Before running the task, check your main-min.css files size. The file size is currently 119.4 kb. After running <span class="notice">gulp cleanCss</span> your file size shrank down to 8.0kb because the tasks removed all the unused styles from your css boostrap.
+Before running the task, check your main-min.css files size. The file size is currently 119.4 kb. After running `gulp cleanCss` your file size shrank down to 8.0kb because the tasks removed all the unused styles from your css boostrap.
 
-{{<contentTitle title="Optimizing js">}}
+## Optimizing js
 
 When working with a lot of javascript files, you will want to optimize your javascript by combining and minifying them.
 
@@ -404,7 +400,6 @@ To concatenate and minify js files install these 2 plugins:
 - **gulp-concat**: combine javascript files
 - **gulp-uglify**: minify javascript files
 
-<span class="hl-info">terminal</span>
 ```bash
 npm install gulp-concat --save-dev
 npm install gulp-uglify --save-dev
@@ -412,7 +407,8 @@ npm install gulp-uglify --save-dev
 
 Optimize your javascript with the following task. The optjs task will take the jquery.js and bootstrap.js file concatenate them into main-min.js, minify that file, and save it within the src/js folder.
 
-<span class="hl-info">gulpfile.js</span>
+**gulpfile.js**
+
 ```js
 gulp.task("optjs", function(){
 return gulp.src(["src/js/jquery.js","src/js/bootstrap.js"])
@@ -424,7 +420,8 @@ return gulp.src(["src/js/jquery.js","src/js/bootstrap.js"])
 
 Edit your index.html to use the main-min.js file
 
-<span class="hl-info">index.html</span>
+**index.html**
+
 ```html
 <script type="text/javascript" src="./js/main-min.js"></script>
 </body>
@@ -433,14 +430,15 @@ Edit your index.html to use the main-min.js file
 
 You can also do these edits in your html file automatically using the gulp-replace plugin.
 
-{{<contentTitle title="Watching files">}}
+## Watching files
 
 Currently you have to run the sassCssMini task in order to compile your scss files every time you make a change. Gulp provides an easy function called watch to automatically run tasks when files are saved. This saves you the hassle of having to enter in the terminal the tasks everytime you save your file.
 
 
 The syntax for the watch method is as follows
 
-<span class="hl-info">gulpfile.js</span>
+**gulpfile.js**
+
 ```js
 gulp.task('task-name',['tasks-to-run-first'], function(){
   gulp.watch(['files-to-watch'], ['other-tasks']);
@@ -453,7 +451,8 @@ The array after the task name holds all the tasks you want to run before the act
 The files-to-watch are the files that will trigger the other-task to run once they have been saved. You can watch all your files in your app/scss folder with app/scss/\*.scss. You can also add as many tasks as you like in the other-tasks array.
 
 
-<span class="hl-info">gulpfile.js</span>
+**gulpfile.js**
+
 ```js
 gulp.task('watchSass',['sassCssMini'], function(){
   gulp.watch('src/scss/*.scss', ['sassCssMini']);
@@ -464,23 +463,25 @@ To test your task run gulp watchSass. Open yor index.html in your browser. You c
 
 You can stop your watch task with Ctrl+c.
 
-{{<contentTitle title="Start a server and enable browser auto reloading">}}
+## Start a server and enable browser auto reloading
 
-The <span class="notice">browser-sync</span> plugin let us get a server up and running quickly and easily so that we can take advantage of auto reloading. No need to keep refreshing your browser to view your changes as before.
+The `browser-sync` plugin let us get a server up and running quickly and easily so that we can take advantage of auto reloading. No need to keep refreshing your browser to view your changes as before.
 
-Install browser-sync with <span class="notice">npm install browser-sync --save-dev</span>.
+Install browser-sync with `npm install browser-sync --save-dev`.
 
 
 Requiring the plugin is a bit different from how we have been doing it before. Browser-sync also uses a create() function as shown below.
 
-<span class="hl-info">gulpfile.js</span>
+**gulpfile.js**
+
 ```js
 var browserSync = require("browser-sync").create();
 ```
 
 You need to create a task which will launch a server. You also need to tell the tasks where the root directory is located. Visit [browser-sync](https://browsersync.io/docs/gulp) to get more information and ways to use browser-sync.
 
-<span class="hl-info">gulpfile.js</span>
+**gulpfile.js**
+
 ```js
 gulp.task('startServer', function(){
   browserSync.init({
@@ -491,12 +492,13 @@ gulp.task('startServer', function(){
 });
 ```
 
-To start up your server enter <span class="notice">gulp startServer</span>. Anytime you wish to stop your server, use Ctrl+c
+To start up your server enter `gulp startServer`. Anytime you wish to stop your server, use Ctrl+c
 
 
-If you noticed, you can not run any tasks while your server is running. So you want to tell gulp to run the startServer tasks before watching your files as shown below. The <span class="notice">browserSync.reload</span> statement in the watch function reloads the browser everytime you save the files being watch.
+If you noticed, you can not run any tasks while your server is running. So you want to tell gulp to run the startServer tasks before watching your files as shown below. The `browserSync.reload` statement in the watch function reloads the browser everytime you save the files being watch.
 
-<span class="hl-info">gulpfile.js</span>
+**gulpfile.js**
+
 ```js
 gulp.task('watchSass',['sassCssMini','optjs','startServer'], function(){
   gulp.watch("src/scss/*.scss", ['sassCssMini']);
@@ -508,15 +510,15 @@ gulp.task('watchSass',['sassCssMini','optjs','startServer'], function(){
 
 This tasks allows us to make edit to our sass files and html files and the browser reloads on its own. Try it out for yourself, open index.html and edit your main.scss file.
 
-{{<contentTitle title="Transferring files">}}
+## Transferring files
 
 Sometimes you don't need to make any changes to certain files or you just need to transfer files from one place to the other such as the "src/fonts/" and the "src/images/"" folder.
 
 You will be transferring these folders and all our optimized files to a dist folder with the task below. The dist folder is the folder where your completed, clean and optimized project will be.
 
-Enter the <span class="notice">npm install gulp-htmlmin --save-dev</span> command to download and use it to minify your html files.
+Enter the `npm install gulp-htmlmin --save-dev` command to download and use it to minify your html files.
 
-<span class="hl-info">gulpfile.js</span>
+**gulpfile.js**
 
 ```js
 /* Transfer to dist */
@@ -559,17 +561,16 @@ This process could also be simplified by editing the gulp.dest() for each tasks 
 The dist folder was created on the fly, you do not have to create it.
 
 
-{{<contentTitle title="Combining tasks and running them in a sequence">}}
+## Combining tasks and running them in a sequence
 
-Let's create a task that will run other tasks in sequence. To do this you should install and require <span class="notice">run-sequence</span> as follows.
+Let's create a task that will run other tasks in sequence. To do this you should install and require `run-sequence` as follows.
 
-<span class="hl-info">terminal</span>
 ```bash
 $ npm install run-sequence --save-dev
 ```
 
+**gulpfile.js**
 
-<span class="hl-info">gulpfile.js</span>
 ```js
 gulp.task('default',function(callback){
   runSequence('sassCssMini','cleanCss','optjs','images','fonts','css','js', callback);
@@ -577,12 +578,12 @@ gulp.task('default',function(callback){
 });
 ```
 
-A task named "default" can simply be runned by entering <span class="notice">gulp</span>. There is no need to enter gulp default.
+A task named "default" can simply be runned by entering `gulp`. There is no need to enter gulp default.
 
 This tasks will do all of the follow tasks in order of how they are listed to ensure each tasks is completed before the next. This ensures that css files aren't transfered before they have been optimized or js files are optimized before they are placed in the dist folder.
 
 
-{{<contentTitle title="Explore more plugins">}}
+## Explore more plugins
 
 Here is a list of a few more plugins that you may find useful.
 

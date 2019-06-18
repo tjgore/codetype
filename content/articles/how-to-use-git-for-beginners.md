@@ -11,18 +11,18 @@ keywords: ["git", "git add", "git commit", "git status", "git for beginners", "h
 draft: false
 ---
 
-{{<contentTitle title="What is Git?">}}
+## What is Git?
 
 Git is an easy and powerful version control software designed to manage files. It is free and open source and used mostly by developers to keep track of their project's code. Git was originally developed by Linus Torvalds for Linux kernel development in 2005.
 
 **Git is not GitHub!** This is a mistake I made when I found out about Github. Github is a code hosting platform used for collaboration. Github allows anyone you want to work and contribute to your projects all at the same time from anywhere in the world.
 
-{{<contentTitle title="Why use Git?">}}
+## Why use Git?
 
 Have you ever named files like this when working on a project for work or school because you wanted to keep the previous version in case you needed it for reference later?
 
-<span class="hl-info">Files</span>
 ```bash
+# Files
 about.html 
 oldabout.html
 about1.2.3.html 
@@ -46,87 +46,82 @@ This is very useful in the case that your code stops working for a strange reaso
 
 In this article, I will explain the basics to get started with git and a little extra but nothing too intense. You will see how to create a local repository, track and commit, view your revisions, and use other common git commands. The best way to learn is by doing so I encourage you to execute all the commands and see the results for yourself.
 
-{{<contentTitle title="Let's get started. Installing Git">}}
+## Let's get started. Installing Git
 
-First, let's check if git is already installed on your local computer. Open your terminal, which is where we will be doing all our git commands, and enter <span class="notice">git --version</span>. If the git version number is returned, git is already installed. If git command not found is returned, you need to install git.
+First, let's check if git is already installed on your local computer. Open your terminal, which is where we will be doing all our git commands, and enter `git --version`. If the git version number is returned, git is already installed. If git command not found is returned, you need to install git.
 
 
 Here are detailed instructions for downloading and installing git on [Mac](https://git-scm.com/download/mac), [Windows](https://gitforwindows.org/), or [Linux](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
-For this article, I will be using Ubuntu OS. Most linux distros come with git installed by default, but if it is not installed, enter <span class="notice">sudo apt-get install git</span> to install it.
+For this article, I will be using Ubuntu OS. Most linux distros come with git installed by default, but if it is not installed, enter `sudo apt-get install git` to install it.
 
-{{<contentTitle title="Setting up your name and email address for your global Git installation">}}
+## Setting up your name and email address for your global Git installation
 
 After installing git and verifying it is installed, enter the following commands to let git know your name and e-mail address.
 
-<span class="hl-info">terminal</span>
 ```bash
+# terminal
 $ git config --global user.name "Your name"
 $ git config --global user.email "your_email@example.com"
 ```
 
-Enter <span class="notice">git config -l</span> (l in low) to view and check that you entered the correct details.
+Enter `git config -l` (l in low) to view and check that you entered the correct details.
 
-<span class="hl-info">output</span>
 ```bash
 user.email=youremail@gmail.com
 user.name=Your-Name
-
 ```
 
-If you entered them incorrectly, You can edit your name and email with this command <span class="notice">nano ~/.gitconfig</span> and save the file.
+If you entered them incorrectly, You can edit your name and email with this command `nano ~/.gitconfig` and save the file.
 
-If you don't have nano installed or you are on windows you can search for the ".gitconfig" file and edit it to make the changes.
+If you don't have nano installed or you are on windows you can search for the **.gitconfig** file and edit it to make the changes.
 
-{{<contentTitle title="Creating a Local Repository">}}
+## Creating a Local Repository
 
 A repository(repo) is the folder where the history of your project is stored.
 
-Create a directory named "website-project" in your current directory. <span class="notice">mkdir directory-name</span>
+Create a directory named **website-project** in your current directory. `mkdir directory-name`
 
-<span class="hl-info">terminal</span>
 ```bash
 $ mkdir website-project
 ```
 
-Move into the "website-project" directory. <span class="notice">cd directory</span>
+Move into the **website-project** directory. `cd directory`
 
-<span class="hl-info">terminal</span>
 ```bash
 $ cd website-project
 ```
 
-Now create an "index.html", "about.html", and "contact.html" file with <span class="notice">touch filename/s</span>. The "website-project" directory is where your project and repo will be located.
+Now create an **index.html**, **about.html**, and **contact.html** file with `touch filename/s`. The **website-project** directory is where your project and repo will be located.
 
-<span class="hl-info">terminal</span>
 ```bash
+# terminal
 $ touch index.html about.html contact.html
 ```
 
-To see the files you just created enter <span class="notice">ls</span>.
+To see the files you just created enter `ls`.
 
-<span class="hl-info">terminal</span>
 ```bash
 $ ls
   about.html  contact.html  index.html
 ```
 
-Within the "website-project" directory, create a repository by entering the <span class="notice">git init</span> command. Git commands can only run in directories where a git repository is located.
+Within the **website-project** directory, create a repository by entering the `git init` command. Git commands can only run in directories where a git repository is located.
 
-<span class="hl-info">terminal</span>
 ```bash
+# terminal
 $ git init
   Initialized empty Git repository in /home/user/Desktop/website-project/.git/
 ```
  
 You have just created your first empty git repo!
 
-{{<contentTitle title="Checking your status">}}
+## Checking your status
 
-Check the status of the repository by entering <span class="notice">git status</span>. Git status checks the current state of the repository. Currently, it is showing that you have 3 untracked files.
+Check the status of the repository by entering `git status`. Git status checks the current state of the repository. Currently, it is showing that you have 3 untracked files.
 
-<span class="hl-info">terminal</span>
 ```bash
+# terminal
 $ git status
   On branch master
 
@@ -143,17 +138,17 @@ $ git status
 
 ```
 
-{{<contentTitle title="Tracking files / Staging files">}}
+## Tracking files / Staging files
 
-Track all your files with the <span class="notice">git add .</span> command, then check the status again with the <span class="notice">git status</span> command. The "git add" command is sometimes confused as adding the files to your repo, but this command adds your files to a middle ground between your project and your repo called "Index" so the files are not added to the repository as yet.
+Track all your files with the `git add .` command, then check the status again with the `git status` command. The `git add` command is sometimes confused as adding the files to your repo, but this command adds your files to a middle ground between your project and your repo called **index** so the files are not added to the repository as yet.
 
 
 Tracked files simply mean the files have been prepared to be added to the local repository, untracked files have not been prepared and can not be added to the repository.
 
 Before you start to track your files let's add some content to the files, but it's ok if you are already tracking your files. You will need to track your files once they have been edited before committing them.
 
-<span class="hl-info">files</span>
 ```bash
+# Files
 <!-- index.html -->
 <html>
  <h1> Home Page </h1>
@@ -170,8 +165,8 @@ Before you start to track your files let's add some content to the files, but it
 </html>
 ```
 
-<span class="hl-info">terminal</span>
 ```bash
+# terminal
 $ git add .
 $ git status
   On branch master
@@ -188,14 +183,14 @@ $ git status
 
 You should see changes to be committed, instead of untracked files.
 
-{{<contentTitle title="Adding Files to the Repository">}}
+## Adding Files to the Repository
 
 To add files to the local repository you must track(git add) and commit(git commit) the files.
 
-You can think of commits as adding files to the local repository. Enter <span class="notice">git commit -m "First commit"</span> to add your project to the repo with the "-m" flag to leave the comment "First commit". If you leave out the "-m" flag git will automatically open an editor for you to leave a comment.
+You can think of commits as adding files to the local repository. Enter `git commit -m "First commit"` to add your project to the repo with the "-m" flag to leave the comment "First commit". If you leave out the `-m` flag git will automatically open an editor for you to leave a comment.
 
-<span class="hl-info">terminal</span>
 ```bash
+# terminal
 $ git commit -m "First commit"
  [master (root-commit) a41c8c1] First commit
  3 files changed, 9 insertions(+)
@@ -206,10 +201,10 @@ $ git commit -m "First commit"
 
 You have just completed your first commit!
 
-To view all your commits use the <span class="notice">git log</span> command, and check your repo status again.
+To view all your commits use the `git log` command, and check your repo status again.
 
-<span class="hl-info">terminal</span>
 ```bash
+# terminal
 $ git log
   commit a41c8c137320f324a298b4d0530be43b4dcb689f (HEAD -> master)
 Author: Your name 
@@ -227,16 +222,16 @@ The commits you see in your logs are snapshots of your files and you can view an
 
 The working directory clean message confirms you have committed all your recent changes made to your project. If you now edit the content of the about.html file and check the status again you will see.
 
-<span class="hl-info">about.html</span>
-```bash
+```html
+ <!-- about.html -->
 <html>
  <h1> About Us Page </h1>
  <p> This is the about us page. Welcome to my site </p>
 </html>
 ```
 
-<span class="hl-info">terminal</span>
 ```bash
+# terminal
 $ git status
   On branch master
   Changes not staged for commit:
@@ -252,14 +247,14 @@ This means that if you commit the project without tracking, the recent changes f
 
 Before moving on, see how much you know by trying to track and commit the about.html.
 
-{{<contentTitle title="Getting old versions from the log">}}
+## Getting old versions from the log
 
-There will be times when you do something wrong to your project and you would like to go back to a previous version temporarily. You can by using the <span class="notice">git checkout your-hash</span> command.
+There will be times when you do something wrong to your project and you would like to go back to a previous version temporarily. You can by using the `git checkout your-hash` command.
 
 To get a history let's edit the index.html and the about.html, then commit them
 
-<span class="hl-info">files</span>
 ```bash
+# Files
 <!-- index.html -->
 <html>
  <h1> Home Page </h1>
@@ -276,7 +271,6 @@ To get a history let's edit the index.html and the about.html, then commit them
 </html>
 ```
 
-<span class="hl-info">terminal output</span>
 ```bash
 $ git status
  On branch master
@@ -305,12 +299,12 @@ $ git commit -m "added content to home and about page"
   2 files changed, 3 insertions(+)
 ```
 
-If you have been following along, You should now have at least 3 commits in your history. Run <span class="notice">git log</span> to view your history.
+If you have been following along, You should now have at least 3 commits in your history. Run `git log` to view your history.
 
 To go back to a previous version, You will need some information from that previous version. That information is called the hash and to get it you run git log
 
-<span class="hl-info">terminal</span>
 ```bash
+# terminal
 $ git log
   commit 2731558cd4bdacb3e3218480cc0980f0b91a0fb9 (HEAD -> master)
   Author: Your name 
@@ -333,14 +327,14 @@ $ git log
 
 In the Results above, I have 3 commits. Each having a commit hash, author, date, and a comment. The first 7 characters or more after "commit" will be used as our hash.
 
-I will take the second commit's hash **bbdfc225f** and revert back to my project's state in this commit temporarily using <span class="notice">git checkout bbdfc225f</span>.
+I will take the second commit's hash **bbdfc225f** and revert back to my project's state in this commit temporarily using `git checkout bbdfc225f`.
 
 **Your hash will be different from mine so make sure to replace my hash with yours.**
 
 Check out the contents of your files and you will see that they have been changed to that previous version.
 
-<span class="hl-info">terminal</span>
 ```bash
+# terminal
 $ git checkout bbdfc225f
   Note: checking out 'bbdfc225f'.
 
@@ -356,7 +350,6 @@ $ git checkout bbdfc225f
   HEAD is now at bbdfc22... added a paragraph
 ```
 
-<span class="hl-info">files</span>
 ```html
 <!-- BEFORE git checkout -->
 <!-- about.html -->
@@ -377,34 +370,33 @@ $ git checkout bbdfc225f
 
 You have successfully gone back in time to your project's previous version. It is like Ctrl Z but you are in control of how far to go back and when you want to, whether it is today or 2 months from now.
 
-To return to the latest version of your working directory use <span class="notice">git checkout master</span>.
+To return to the latest version of your working directory use `git checkout master`.
 
-If you submit a commit while you are in a previous version, this previous version will then become your most recent version. You can commit the previous version in another branch to prevent overwriting your latest version. <span class="notice">git checkout -b your-branch-name hash-you-want</span>.
+If you submit a commit while you are in a previous version, this previous version will then become your most recent version. You can commit the previous version in another branch to prevent overwriting your latest version. `git checkout -b your-branch-name hash-you-want`.
 
 
-You can also do a hard reset to a previous version using <span class="notice">git reset --hard your-hash</span>, which reverts you back to a previous version permanently. Be careful using a hard reset, it can not be undone and removes every version after the version you reset to.
+You can also do a hard reset to a previous version using `git reset --hard your-hash`, which reverts you back to a previous version permanently. Be careful using a hard reset, it can not be undone and removes every version after the version you reset to.
 
-{{<contentTitle title="Branches">}}
+## Branches
 
 You can think of branches as folders. Branches are entirely independent of other branches. For this entire article, you have been working in the master branch, the default branch.
 
-
-Let's add some styles to the index.html page to give the page some color. You can add these changes to a new branch so that they don't affect the master branch using <span class="notice">git checkout -b designs</span>.
+Let's add some styles to the index.html page to give the page some color. You can add these changes to a new branch so that they don't affect the master branch using `git checkout -b designs`.
 
 When you create a branch, you copy the latest version of your current branch into the branch you are creating.
 
-<span class="hl-info">terminal</span>
 ```bash
+# terminal
 $ git checkout -b designs
   Switched to a new branch 'designs'
 ```
 
 You have successfully created a branch and you are now working within this branch!
 
-Create a styles file <span class="notice">touch style.css</span>, and update the index.html file to use the style.css
+Create a styles file `touch style.css`, and update the index.html file to use the style.css
 
-<span class="hl-info">style.css</span>
 ```css
+/* style.css */
 h1 {
 color: red;
 }
@@ -413,8 +405,8 @@ color: blue;
 }
 ```
 
-<span class="hl-info">index.html</span>
 ```html
+<!-- index.html -->
 <html>
 <link rel="stylesheet" href="style.css" >
  <h1> Home Page </h1>
@@ -423,10 +415,10 @@ color: blue;
 </html>
 ```
 
-Track the files with git add . command, then git commit -m "added style" to commit the changes.
+Track the files with `git add .` command, then `git commit -m "added style"` to commit the changes.
 
-<span class="hl-info">terminal</span>
 ```bash
+# terminal
 $ git add .
   $ git commit -m "added style"
     [designs a9a7630] added style
@@ -435,20 +427,20 @@ $ git add .
 
 ```
 
-You now have a new branch "designs" that is separate from your main (master) branch.
+You now have a new branch **designs** that is separate from your main (master) branch.
 
-You can switch back to your master branch by using <span class="notice">git checkout master</span>. After returning to your master branch, Open the "index.html" file and you will notice the <link> tag is gone along with the "style.css" file. That is because all the changes we made were done in the designs branch.
+You can switch back to your master branch by using `git checkout master`. After returning to your master branch, Open the "index.html" file and you will notice the `<link>` tag is gone along with the `style.css` file. That is because all the changes we made were done in the designs branch.
 
 That is the power of branches. It is like having 2 independent folders with your files without actually having these folders.
 
-You can use the <span class="notice">git show-branch -a</span> command to display all your branches logs and the <span class="notice">git branch -d your-branch-name</span> to delete the branch.
+You can use the `git show-branch -a` command to display all your branches logs and the `git branch -d your-branch-name` to delete the branch.
 
-{{<contentTitle title="Merging branches">}}
+## Merging branches
 
 Branches can also be merged to create a single branch. You can go back to the master branch, if you are not in it already, and combine it with the designs branch.
 
-<span class="hl-info">terminal</span>
 ```bash
+# terminal
 $ git checkout master
   Switched to branch 'master'
 
@@ -465,13 +457,13 @@ $ git checkout master
 
 From your git log you should see that the master branch now has everything the designs branch has. You can also see that the master branch has the style.css file.
 
-{{<contentTitle title="Creating a GitHub repository">}}
+## Creating a GitHub repository
 
 Head over to [GitHub](https://www.github.com/) and create an account if you don't already have one.
 
 Let's assume your username for your account is john.
 
-After creating an account, you need to create a repository called "my-project". You can create a repo by clicking on the new repository button or start a project button. No need to initialize with a README.md or .gitignore right now.
+After creating an account, you need to create a repository called **my-project**. You can create a repo by clicking on the new repository button or start a project button. No need to initialize with a README.md or .gitignore right now.
 
 ![Github Add](/images/articles/github-add.jpg "Github-add")
 
@@ -479,32 +471,32 @@ After creating an account, you need to create a repository called "my-project". 
 
 Your repo link should be something like this with your username github.com/john/my-project.
 
-{{<contentTitle title="Pushing your repository to GitHub">}}
+## Pushing your repository to GitHub
 
 When you push files to github, you are transferring files from your local repo to github repo.
 
-You can now add your github repo url to your local remotes with <span class="notice">git remote add origin https://github/john/my-project</span>.
+You can now add your github repo url to your local remotes with `git remote add origin https://github/john/my-project`.
 
-The remote called "origin" is the location of where you want to push and pull files online "https://github/john/my-project".
+The remote called **origin** is the location of where you want to push and pull files online **https://github/john/my-project**.
 
-To check your remotes enter <span class="notice">git remote -v</span>.
+To check your remotes enter `git remote -v`.
 
-<span class="hl-info">terminal</span>
 ```bash
+# terminal
 $ git remote add origin https://github/john/my-project
 $ git remote -v
 ```
 
 **Remember to replace john with your own username and my-project with your github repo name, if you didn't name it "my-project".**
 
-You can push your local repo to your github repo with the <span class="notice">git push origin master</span> command.
+You can push your local repo to your github repo with the `git push origin master` command.
 
 This command will prompt you to enter your Github account username and password. Even though the password field is blank when you type, it is still receiving your input.
 
 Before pushing up your project, check your status to make sure you have nothing to commit.
 
-<span class="hl-info">terminal</span>
 ```bash
+# terminal
 $ git push origin master
   Username for 'https://github.com': john
   Password for 'https://john@github.com': 
@@ -520,14 +512,14 @@ $ git push origin master
 
 Go back to your github repo and refresh. Your local repo is now on github repo for everyone to see and contribute to.
 
-{{<contentTitle title="Pulling repository from GitHub">}}
+## Pulling repository from GitHub
 
 When you pull repositories from github, you are transferring files from the github repo to your local computer.
 
 Pulling your github repo with the git pull origin master command will result in the result below.
 
-<span class="hl-info">terminal</span>
 ```bash
+# terminal
 From https://github.com/john/my-project
 * branch            master     -> FETCH_HEAD
 Already up-to-date.
@@ -540,8 +532,8 @@ This is where GitHub is used for collaborating. If someone else has edited your 
 
 To demonstrate this go to your repository on GitHub and edit the about file there and not on your local machine.
 
-<span class="hl-info">about.html</span>
-```bash
+```html
+<!-- about.html -->
 <html>
  <h1> About Us Page </h1>
  <p> This is the about us page. Welcome to my site </p>
@@ -550,10 +542,10 @@ To demonstrate this go to your repository on GitHub and edit the about file ther
 </html> 
 ```
 
-Now pull your repo with the <span class="notice">git pull origin master</span> command to receive all the updates.
+Now pull your repo with the `git pull origin master</span> command to receive all the updates.
 
-<span class="hl-info">terminal</span>
 ```bash
+# terminal
 remote: Counting objects: 3, done.
 remote: Compressing objects: 100% (3/3), done.
 remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
@@ -569,14 +561,14 @@ about.html | 1 +
 
 Your local repo has been updated with the changes from your Github repo.
 
-{{<contentTitle title="Cloning a GitHub repository">}}
+## Cloning a GitHub repository
 
-To download a github repo you need to clone it with the <span class="notice">git clone repository-url</span> command.
+To download a github repo you need to clone it with the `git clone repository-url` command.
 
 This command will copy the files from the repository url you entered. Once you have git installed, you can clone files anywhere you like even outside of the directory we have been working in.
 
-<span class="hl-info">terminal</span>
 ```bash
+# terminal
 $ git clone https://github/john/my-project
   Cloning into 'my-project'...
   remote: Counting objects: 16, done.
@@ -591,7 +583,7 @@ Also, the pull command can only be used in an initialized git repo on your compu
 
 You should now know enough about git to use with your projects and continue to learn more advanced features. Now go out there Git Started!
 
-{{<contentTitle title="Summary">}}
+## Summary
 
 Below is a list of all the commands I used within this article:
 

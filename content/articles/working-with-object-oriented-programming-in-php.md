@@ -12,13 +12,13 @@ keywords: ["php object oriented programming is useful", "php object oriented pro
 draft: false
 ---
 
-{{<contentTitle title="What is object oriented programming?">}}
+## What is object oriented programming?
 
 Object oriented programming, often referred to as OOP, is a programming design pattern used to create well structured, reusable, and easy to maintain applications.
 
 OOP accomplishes this by creating classes that groups its data properties and data methods that make up each other.
 
-{{<contentTitle title="Why use object oriented programming in php?">}}
+## Why use object oriented programming in php?
 
 Object oriented programming is very common and used in many programming languages other than PHP such as Javascript, Python, Ruby, Java and much more. So learning the basics in PHP will allow you to understand it across other languages.
 
@@ -33,7 +33,7 @@ Most of the benefits of using OOP are as follows:
 
 Don’t think of OOP as a complicated way of coding. It's here to make coding easier. Once you understand the concept of OOP, digging deeper and using it becomes fun and easy.
 
-{{<contentTitle title="Prerequisite">}}
+## Prerequisite
 
 You should have an understanding and some experience with coding in PHP. If not you can check out [PHP basics](/articles/php-basics), which gives you an intro to php programming.
 
@@ -51,7 +51,7 @@ At the end of the article you should know:
 - Class encapsulation
 - Class Inheritance
 
-{{<contentTitle title="Classes and Objects">}}
+## Classes and Objects
 
 Before getting into the code, we first should understand what are classes and objects. Classes are like blueprints for creating objects.
 
@@ -71,7 +71,6 @@ You will see more of this as you continue through the article.
 
 Let’s start to create this Car Class now.
 
-<span class="hl-info"></span>
 ```php
 <?php
 class Car
@@ -84,17 +83,16 @@ $dream_car = new Car;
 var_dump($dream_car);
 ```
 
-{{<contentTitle title="Adding Class Properties and Methods">}}
+## Adding Class Properties and Methods
 
 From the above car factory example, the properties of the Car Class are the brand, the colors, and the transmission. Class properties describe the object and are class specific variables, meaning that these variables can only be access by its object.
 
 The functions, driving and reversing are the methods of the Class. Methods are php functions specific to the classes, just as properties.
 
-The arrow operator -&gt; is used to access an object properties/methods.
+The arrow operator `->` is used to access an object properties/methods.
 
 See an example of the Car Class with its properties and methods below.
 
-<span class="hl-info"></span>
 ```php
 <?php
 class Car
@@ -137,9 +135,8 @@ $dream_car->reverse();
 ```
 [View code in IDE](https://www.tehplayground.com/KHxLR1YQKoO41bn7)
 
-The <span class="notice">$this</span> keyword allows objects to reference themself within the class.
+The `$this` keyword allows objects to reference themself within the class.
 
-<span class="hl-info"></span>
 ```php
 <?php
 class Car
@@ -166,7 +163,7 @@ $dream_car->drive();
 ```
 
 
-{{<contentTitle title="Magic Methods Constructor and Destructors">}}
+## Magic Methods Constructor and Destructors
 
 Magic methods are default special methods within classes that are called when specific actions take place with objects.
 
@@ -178,7 +175,6 @@ In Php, There are a few magic methods, but we will just focus on 2
 
 The constructor magic method is often used to set property values or execute some code you need to run when an object is created.
 
-<span class="hl-info"></span>
 ```php
 <?php
 class Car
@@ -226,7 +222,6 @@ With OOP you can create many different objects with a class. Same way as the car
 
 To see this in action take a look at the code below.
 
-<span class="hl-info"></span>
 ```php
 <?php
 class Car
@@ -261,7 +256,7 @@ $future_car->drive();
 */
 ```
 
-{{<contentTitle title="Level of Visibility of Classes">}}
+## Level of Visibility of Classes
 
 Classes have 3 levels of visibility for their properties and methods.
 
@@ -275,7 +270,6 @@ The types of visibility are:
 
 Visibility is the mechanism for encapsulation. Encapsulation is the way a class internals such as its structure, properties, and methods are hidden from direct unauthorized access. This approach helps to make classes modular and can be easily edited without affecting the overall application in the long run.
 
-<span class="hl-info"></span>
 ```php
 <?php
 class Car
@@ -321,7 +315,7 @@ $dream_car->display();
 */ 
 ```
 
-{{<contentTitle title="Class Inheritance">}}
+## Class Inheritance
 
 Inheritance allows classes to inherit another class properties and methods by using the keyword extends. The level of visibility can control how the subclass will inherit the parent class.
 
@@ -332,7 +326,6 @@ The vehicle factory requirements are engine, color, seats, doors and the functio
 
 The car factory can use the vehicle factory properties and functions as if it is their own. This is called class inheritance.
 
-<span class="hl-info"></span>
 ```php
 //The vehicle class is the parent of the car class
 <?php
@@ -432,7 +425,6 @@ Children class properties and methods can override the parent’s. if the child 
 
 The above example shows single level inheritance but you can go a step further and even have multiple level inheritance. Multilevel inheritance is as simple as following the basics. See the code below.
 
-<span class="hl-info"></span>
 ```php
 <?php
 class A 
@@ -477,7 +469,7 @@ $fam->get_your_family();
 ```
 [View code in IDE](https://www.tehplayground.com/YFVMxhnvkVzQKI4Z)
 
-{{<contentTitle title="Summary">}}
+## Summary
 
 Now that you have seen how OOP is structured and used, I hope you notice the benefits that come with it. Large amounts of data sets can be handled easily when using OOP.
 

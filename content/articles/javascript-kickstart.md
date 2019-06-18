@@ -11,7 +11,7 @@ keywords: ["javascript kickstart", "learn javascript quickly"]
 draft: false
 ---
 
-{{<contentTitle title="What is Javascript?">}}
+## What is Javascript?
 
 Javascript, also called JS, is a high level programming language that adds interactivity to your website. It gives you the ability to detect a user’s actions like clicking and scrolling or allows you to manipulate the webpage.
 
@@ -30,7 +30,7 @@ HTML, CSS, and Javascript are the three core technologies of web pages. You can 
 
 Almost all websites use javascript and all modern major web browsers can run javascript.
 
-{{<contentTitle title="Why would you want to use javascript?">}}
+## Why would you want to use javascript?
 
 Here are a few reasons why you would want learn or use Javascript.
 
@@ -40,7 +40,7 @@ Here are a few reasons why you would want learn or use Javascript.
 - All major browser support javascript and have it enabled by default.
 Javascript can be easily mixed with HTML/CSS.
 
-{{<contentTitle title="Prerequisite">}}
+## Prerequisite
 
 A basic knowledge of HTML and CSS would be nice but not required. If you don’t know HTML or CSS try to find the patterns in HTML and follow along.
 
@@ -48,18 +48,17 @@ To use Javascript you don’t need to download any software or set up an environ
 
 Instead, to keep things simple, we will use an online js ide, [JsFiddle](https://jsfiddle.net/).
 
-{{<contentTitle title="Goal">}}
+## Goal
 
 The objective of this article is to quickly get you started with the javascript basics and show you what you can accomplish with it.
 
-{{<contentTitle title="Variables">}}
+## Variables
 
 Variables are memory containers with descriptive names used for storing data or information.
 
-Use the <span class="notice">var</span> keyword to declare a variable. You may also sometimes see the keyword <span class="notice">let</span>. The variable name should be camelcase meaning the first word is lowercase while the second word is uppercase.
+Use the `var` keyword to declare a variable. You may also sometimes see the keyword `let`. The variable name should be camelcase meaning the first word is lowercase while the second word is uppercase.
 
 
-<span class="hl-info"></span>
 ```js
 var myNumber = 10;
 var totaolPrice = 23.99;
@@ -74,9 +73,8 @@ var person = {
 
 The first variable name is myNumber with the value 10 stored in it. The variable names are case sensitive, so myNumber, mynumber and MyNumber are all different.
 
-The const <span class="notice">keyword</span> is used to declare an unchangeable variable and the name is usually in all uppercase.
+The const `keyword` is used to declare an unchangeable variable and the name is usually in all uppercase.
 
-<span class="hl-info"></span>
 ```js
  const BG_COLOR = "orange";
 ```
@@ -93,13 +91,13 @@ The following data types in javascript are:
 - Null: nothing or empty
 - Undefined: value is not assigned
 
-The <span class="notice">typeof</span> operator allows you to see which type is stored in the variable.
+The `typeof` operator allows you to see which type is stored in the variable.
 <br/><br/>
 
 <script async src="//jsfiddle.net/of014r36/7/embed/js,html,result/dark/"></script>
 
 
-{{<contentTitle title="Outputting data">}}
+## Outputting data
 
 There are multiple ways of displaying variable’s data in javascript.
 
@@ -128,9 +126,9 @@ The console.log() function displays the data into the browser’s console.
 
 In Chrome, to view the browser's console simple hit F12 on your keyboard.
 
-You can also enter you js code here directly and execute it. Try typing <span class="notice">document.write(“Cool”);</span> ,hit enter and see what happens to the current webpage.
+You can also enter you js code here directly and execute it. Try typing `document.write(“Cool”);` ,hit enter and see what happens to the current webpage.
 
-innerHTML displays the data in a html element on the webpage, but is not as simple as the previous ways. For this you need to select an element from the page by using its html id or class attribute and replace its content with your data. See the example below and take note of the HTML and JS connection and the <span class="notice">document.querySelector("#container")</span> function to access the html element.
+innerHTML displays the data in a html element on the webpage, but is not as simple as the previous ways. For this you need to select an element from the page by using its html id or class attribute and replace its content with your data. See the example below and take note of the HTML and JS connection and the `document.querySelector("#container")` function to access the html element.
 <br/><br/>
 <script async src="//jsfiddle.net/of014r36/15/embed/js,html,result/dark/"></script>
 
@@ -140,7 +138,7 @@ You can also use these functions to access html elements:
 - document.getElementsByClassName("element-classname")
 - document.getElementsByTagName("p")
 
-{{<contentTitle title="Operators">}}
+## Operators
 
 Operators are mathematical symbols which produce a result based on the data/variables they act on. Operators may perform different functions such as arithmetic, logic or comparison on data.
 
@@ -152,11 +150,11 @@ Therefore operators can be divided up into the following groups:
 - and Logical && || !
 
 
-Arithmetic operators are used to perform arithmetic operations such as addition and subtraction. Since we are using console.log(), press F12 to view the result.
+Arithmetic operators are used to perform arithmetic operations such as addition and subtraction. Since we are using **console.log(), press F12** to view the result.
 <br/><br/>
 <script async src="//jsfiddle.net/of014r36/31/embed/js,result/dark/"></script>
 
-Assignment operators are used to write and store a value to a variable. We already used the “=” assignment operator in the variable section to store the data in a variable.
+Assignment operators are used to write and store a value to a variable. We already used the `=` assignment operator in the variable section to store the data in a variable.
 <br/>
 <br/>
 <script async src="//jsfiddle.net/of014r36/47/embed/js,result/dark/"></script>
@@ -169,7 +167,7 @@ There are only 3 logical operators and they are used to perform conditional stat
 <br/><br/>
 <script async src="//jsfiddle.net/of014r36/64/embed/js,result/dark/"></script>
 
-{{<contentTitle title="Conditional Statements">}}
+## Conditional Statements
 
 Conditional statements are used to perform specific actions based on a condition. The if statement checks the condition passed to it and if the condition is true, execute the if statement's block of code.
 
@@ -181,7 +179,7 @@ There are three types of if statements.
 <br/><br/>
 <script async src="//jsfiddle.net/of014r36/75/embed/js,result/dark/"></script>
 
-{{<contentTitle title="Loops">}}
+## Loops
 
 A loop is a block of code that you want to repeat many times in a row. Counting from 1-100 is an example of when a loop would be handy. Instead of typing out the console.log() function or the alert() function 100 times, you can use a loop.
 
@@ -191,7 +189,7 @@ There are 3 types of loops .
 - The do .… while loop
 - And the for loop
 
-The while loop repeats its block of code as long as the condition within it's () is true. The condition is first checked before each iteration of the loop's body.
+The while loop repeats its block of code as long as the condition is true. The condition is first checked before each iteration of the loop's body.
 <br/><br/>
 <script async src="//jsfiddle.net/7q8t9165/embed/js,result/dark/"></script>
 
@@ -205,7 +203,7 @@ For loops are best suited for when you know how many times you want the loop to 
 <br/><br/>
 <script async src="//jsfiddle.net/7q8t9165/4/embed/js,result/dark/"></script>
 
-{{<contentTitle title="Functions">}}
+## Functions
 
 Functions are modular blocks of code that allows code to be reusable. You will find that you will sometimes need to repeat a block of code in multiple places. The best approach to this problem is by creating your own functions.
 
@@ -215,7 +213,7 @@ Some examples of javascript built in functions are the alert(), document.write()
 
 Go through it in detail, so that when you are creating your own functions, you are not re-creating built in functions.
 
-To declare a function you must use the <span class="notice">function</span> keyword along with () after the functions name and include the block of code you want to execute within the function's body.
+To declare a function you must use the `function` keyword along with () after the functions name and include the block of code you want to execute within the function's body.
 
 To run the code within the function you need to call the function. See the example below.
 <br/><br/>
@@ -223,11 +221,11 @@ To run the code within the function you need to call the function. See the examp
 
 Functions can take in data and use it to do their tasks. The data passed in is called the function's arguments and are placed within the () after the function name.
 
-Functions also provide the <span class="notice">return</span> keyword. The return keyword stops the function's code and sends the variable after the return keyword to the function's caller.
+Functions also provide the `return` keyword. The return keyword stops the function's code and sends the variable after the return keyword to the function's caller.
 <br/><br/>
 <script async src="//jsfiddle.net/7q8t9165/21/embed/js,html,result/dark/"></script>
 
-{{<contentTitle title="Events">}}
+## Events
 
 What makes javascript so awesome is that it is an event driven programming language. This means that an event such as a user’s click or mouse move can trigger code to be executed.
 
@@ -249,12 +247,12 @@ Take look at the code below to see how you can use some of these events. Note, t
 <script async src="//jsfiddle.net/7q8t9165/50/embed/js,html,css,result/dark/"></script>
 
 {{%note%}}
-<span class="notice">document.getElementById("hitOne").onclick = function</span> and <span class="notice">document.getElementById("hitTwo").addEventListener("click", function)</span> perform the same action.
+`document.getElementById("hitOne").onclick = function` and `document.getElementById("hitTwo").addEventListener("click", function)` perform the same action.
 {{%/note%}}
 
 How awesome is that? Just imagine what you can do with javascript.
 
-{{<contentTitle title="Javascript demo">}}
+## Javascript demo
 
 To give a small demonstration of how javascript can be used take a look at the 3 simple code snippets below.
 
@@ -286,7 +284,7 @@ The HTML and Javascript buttons use the mouseenter event to display their conten
 
 The PHP button displays its content on a simple click while the Python content displays when you double click.
 
-{{<contentTitle title="Wrap up">}}
+## Wrap up
 
 Javascript is a very popular language and it keeps getting bigger and better. It is a great tool to add to your knowledge set and will be around for a long time.
 

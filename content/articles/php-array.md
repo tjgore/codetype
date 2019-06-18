@@ -12,12 +12,11 @@ keywords: ["handy php array functions", "most commonly used php array functions"
 draft: false
 ---
 
-{{% tableOfContent hide="true" column="column-2" content="array_chunk,array_combine,array_count_values,array_diff,array_map, array_filter,array_flip,array_key_exists,array_search" %}}
+{{% tableOfContent hide="true" column="column-2" content="array-chunk,array-combine,array-count-values,array-diff,array-map, array-filter,array-flip,array-key-exists,array-search" %}}
 
 
 What is an array? An array is a collection of data. You can create an array in many ways.
 
-<span></span>
 ```php
 <?php
 # Defining an array
@@ -35,7 +34,7 @@ echo $cars["name"];
 $computer["brand"] = "DELL";
 ``` 
 
-{{<contentTitle title="array_chunk">}}
+## array_chunk
 
 Splits an array into groups or chunks of new arrays.
 Syntax:
@@ -44,7 +43,6 @@ Syntax:
 - `array` is the array you want to chunk. 
 - `int` is the number of chunks to return.
 
-<span></span>
 ```php
 <?php
 
@@ -83,7 +81,7 @@ array(3) {
 */
 ```
 
-{{<contentTitle title="array_combine">}}
+## array_combine
 
 Creates an array from 2 arrays. The first array being the keys, while the second array are the values.
 Syntax: `array_combine(array, array) :array`
@@ -91,7 +89,6 @@ Syntax: `array_combine(array, array) :array`
 - 1st param is the array that will be the new array indexes
 - 2nd param is the array that will be the new array values
 
-<span></span>
 ```php
 <?php
 
@@ -110,12 +107,11 @@ Array
 */
 ```
 
-{{<contentTitle title="array_count_values">}}
+## array_count_values
 
 Count the values of an array and returns an array with the value as the key and the count as the value
 Syntax: `array_count_values(array) :array`
 
-<span></span>
 ```php
 <?php
 
@@ -134,12 +130,11 @@ Array
 */
 ```
 
-{{<contentTitle title="array_diff">}}
+## array_diff
 
 Compare 2 or more arrays and returns an array with the elements present in the 1st array that are not in the other arrays.
 Syntax: `array_diff(array, array) :array`
 
-<span></span>
 ```php
 <?php
 
@@ -158,12 +153,11 @@ Array
 */
 ```
 
-{{<contentTitle title="array_map">}}
+## array_map
 
 Passes each element of an array through a custom function and returns an updated array of the values.
 Syntax: `array_map(aFunction, array1, array2, array3) :array`
 
-<span></span>
 ```php
 <?php
 $phones = ["Samsung", "Iphone", "LG", "Nokia"];
@@ -181,12 +175,11 @@ Array
 )
 */
 ```
-{{<contentTitle title="array_filter">}}
+## array_filter
 
 Works like array_map and loops through an array except array_filter removes elements that don't satisfy the condition.
 Syntax: `array_filter(array, aFunction) :array`
 
-<span></span>
 ```php
 <?php
 $posts = ["title" => "This is a post", "date" => "25 July", "comments" => "25"];
@@ -206,12 +199,11 @@ Array
 */
 ```
 
-{{<contentTitle title="array_flip">}}
+## array_flip
 
 Flips the array's keys with its values.
 Syntax: `array_flip(array) :array`
 
-<span></span>
 ```php
 <?php
 $person = ["name" => "Sara", "age" => 28, "weight" => "135"];
@@ -226,11 +218,10 @@ Array
 */
 ```
 
-{{<contentTitle title="array_key_exists">}}
+## array_key_exists
 
 Finds the key within the array. Syntax: `array_key_exists(key, array) :bool`
 
-<span></span>
 ```php
 <?php
 $house = ["price" => "$100M", "color" => "blue"];
@@ -240,12 +231,11 @@ if(array_key_exists("price", $house)) {
 # The house price is available!
 ```
 
-{{<contentTitle title="array_search">}}
+## array_search
 
 Search an entire array for a value and returns the key.
 Syntax: `array_search(string, array) :string`
 
-<span></span>
 ```php
 <?php
 $clothes = ["color" => "red", "sizes" => "M", "store" => "H&M", "sale" => true];
@@ -254,13 +244,12 @@ echo $key;
 // store
 ```
 
-{{<contentTitle title="array_push">}}
+## array_push
   
  Add an element to an array.
  Syntax: `array_push(array, element1, element2, elementNth) :array`
  
- <span></span>
- ```php
+  ```php
  $tools = ["hammer"];
  array_push($tools, "chain", "screw driver");
  print_r($tools);
