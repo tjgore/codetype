@@ -9,7 +9,7 @@ haveImage: false
 color: "bg-red-gradient"
 categories: ["Javascript"]
 keywords: ["Useful Javascript Functions for React Developers",]
-draft: false
+draft: true
 ---
 
 {{% tableOfContent column="column-2" content="array.map,array.filter,array.find,array.slice,array.splice,array.findindex,array.pop,array.push,array.unshift,array.shift,array.indexOf" %}}

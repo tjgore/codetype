@@ -4,6 +4,7 @@ title = "Codetype"
 theme = "codetype-theme"
 pygmentsCodeFences = true
 enableRobotsTXT = true
+googleAnalytics = "UA-68691339-6"
 
 [taxonomies]
   category = "categories"
